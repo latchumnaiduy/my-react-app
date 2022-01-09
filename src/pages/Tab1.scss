@@ -1,0 +1,46 @@
+@import "../theme//variables";
+
+
+@mixin bg-app {
+    background-color: $ey-app-bg-color;
+    color: $ey-app-white;
+}
+.ion-header {
+    @include bg-app;
+    &-toolbar {
+        --background:$ey-app-bg-color;
+        --color: $ep-app-white;
+    }
+}
+.ion-col-item:not(:last-child){
+    border-bottom: 2px solid $ey-border-color;
+}
+.btn-save{
+    height: $ey-app-btn-height;
+    background-color: $ey-app-bg-color;
+    color: $ey-app-white;
+    width: 48%;
+}
+.btn-cancel{
+    height: $ey-app-btn-height;
+    background-color: transparent;
+    border: 1px solid $ey-app-bg-color;
+    width: 48%;
+    color: $ey-app-black;
+}
+.footer-btns {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.ion-footer {
+    background-color: $ey-app-white;
+    padding-top: 10px;
+    border-top: 1px solid $ey-app-black;
+}
+.ion-breadcrumb-header{
+    background-color: $ey-app-white;
+    padding-bottom: 10px;
+}
