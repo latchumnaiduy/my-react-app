@@ -1,0 +1,10 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 47" width="130" height="47">
+	<title>Vector</title>
+	<defs>
+		<image  width="130" height="46" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIIAAAAuCAMAAADTAzFaAAAAAXNSR0IB2cksfwAAAFdQTFRFAH26AH24AAAAAHu7AH26AIC3AH26AHy6AH26AH67AH65AHq6AHCvAH26AH27AH26AHy5AHy5AH25AH26AH+6AHu4AH65AHy4AH26AICvAH26AHy5AHy5gC71uQAAAB10Uk5T/3AAQO8g38+ff18wEL+Pr6DO3v4wcICPrhDuUJ9O2+CsAAAAzElEQVR4nMXYWRaCMAyF4WtkcMCBInXc/zoteBCx7/mzgu+c9jZJJddaWV6+AmnNE4oSJ6jKDO4E1TxBG56gLU/QjicUe5ywjAVDUNXgBB14go48YY4mR/hGEyRM0QQJUzRJguoGJ+jEE8ZowoRhmKQJaZikBWmYpAXpKGiAzvhBtPh1DCVNGAQsobvgr2OPt6mIN+srPrLc8MEt3GlCmJcZSPD4WacgwhNf6CK+1i4ECOFlNKE1mhD+v9x4gTvh059RQp8JTJ1rxVxgbwqhDqJ1eK0LAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<use id="Background" href="#img1" x="0" y="0" />
+</svg>

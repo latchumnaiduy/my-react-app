@@ -1,0 +1,60 @@
+.location-tool-bar {
+  --background: rgba(0, 125, 186, 1);
+  height: 56px;
+}
+.btn-back{
+  top: 14px;
+  border-radius: 0px;
+  width: 20px;
+  height: 20px;
+  margin-left: 12px;
+}
+.title {
+  color: #ffffff;
+  height: 35px;
+  position: absolute;
+  font-family: Robotoregular;
+  top: 11px;
+  font-size: 24px;
+  left: 72px;
+}
+ .menu-btn {
+  top: 14px;
+  border-radius: 0px;
+  width: 30px;
+  height: 30px;
+}
+.locations{
+margin-left: 16px;
+border-radius: nullpx;
+font-family: Robotoregular;
+font-size: 24px;
+text-align: center;
+line-height: 35px;
+letter-spacing: 0px;
+text-align: left;
+--color:#ffffff;
+}
+.location-list{
+  font-size: 24px;
+text-align: center;
+  border-radius: nullpx;
+font-family: Robotoregular;
+  margin-left: 16px;
+  --border-color:rgba(2, 2, 2, 0.54);
+  height: 56px;
+  --background:white;
+}
+.p-0 {
+  --padding-start: 0 !important;
+}
+.location-list1{
+  --border-color:rgba(0, 0, 0, 0.54);
+  height: 56px;
+  --background:rgba(0, 125, 186, 1);
+  --color:white;
+  font-size: 24px;
+  font-family: Robotoregular;
+  /* margin-left: 16px; */
+ 
+}

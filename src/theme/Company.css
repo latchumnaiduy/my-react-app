@@ -1,0 +1,150 @@
+.sub-header {
+  --background: #ffffff;
+  width: 100%;
+  height: 64px;
+  list-style: none;
+  /* width: 375px; */
+}
+
+.tool-bar {
+  --background: rgba(0, 125, 186, 1);
+  width: 100%;
+  height: 56px;
+}
+
+.header {
+  height: 56px;
+  font-family: RobotoRegular;
+  font-size: 20px;
+  /* width: 375px; */
+  
+}
+.footer-bar {
+  width: 100%;
+  height: 70px;
+  font-family: RobotoRegular;
+  font-size: 20px;
+}
+
+ion-item {
+  font-family: RobotoRegular;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 23px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: rgba(0, 0, 0, 1);
+  /* width: 375px; */
+}
+
+
+  .add-btn {
+    text-transform: capitalize;
+    --background: white;
+    --color: #007dba;
+    text-align: center;
+    position: absolute;
+    border: 1px solid #007dba;
+    font-size: 20px;
+    width: 160px;
+    height: 44px;
+    margin: -20px;
+    left: 28px;
+    right: 19px;
+    --background: #007dba;
+    --color: #fff;
+  } */
+.warning {
+  color: yellow;
+}
+ion-label {
+  font-family: "Roboto";
+}
+
+
+
+
+
+
+
+
+
+
+
+.companytitle{
+  text-align: center;
+  top: 10px;
+  /* margin-top: -34px; */
+  /* width: 260px;
+  height: 35px; */
+  /* top: 11px;
+  left: 72px; */
+  color: white;
+  font-family: "Robotoregular";
+  font-size: 24px;
+}
+
+.row {
+  --border-bottom: solid 10px gray;
+}
+.item {
+  border-bottom: 1px solid #666d75;
+  margin-top: 10px;
+  /* width: 375px; */
+}
+
+
+
+
+.track {
+  font-family: Robotomedium;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0px;
+  text-align: left;
+  /* width: 375px; */
+  margin-top: 5px; 
+    
+  /* line-height: 0.7; */
+ 
+  
+}
+.try{
+  margin-top: -10px;
+}
+h3 {
+  color: #8a929d;
+  font-size: 18px !important;
+  font-weight: 500;
+  font-style: normal;
+  /* line-height: 24px; */
+  text-align: left;
+  font-family: Robotomedium;
+  /* margin-bottom: -5px; */
+   padding-top: 3px; 
+}
+.shadow {
+  border-top: 1px solid rgba(0, 0, 0, 0.54);
+  /* width: 375px; */
+}
+
+
+.a{
+  color: #8a929d
+  
+}
+/* .content{
+  width: 375px;
+} */
+.icon{
+   height: 32px;
+  width: 32px;
+  /* left: 330px;
+  top: 12px;
+  border-radius: 0px; */
+}
+
+

@@ -1,0 +1,378 @@
+.track-tool-bar {
+  --background: rgba(0, 125, 186, 1);
+  width: 100%;
+  /* height: 56px; */
+  
+}
+
+.track-sub-header {
+  --background: #ffffff;
+  /* width: 100%;
+  height: 56px; */
+  list-style: none;
+  /* width: 375px; */
+}
+.track-title {
+  color: #ffffff;
+  height: 35px;
+  position: absolute;
+  text-align: left;
+  font-family: Robotoregular;
+  top: 11px;
+  font-size: 24px;
+   left: 72px; 
+}
+
+
+.trackbreadcrumb {
+ list-style: none;
+ overflow: hidden;
+ margin-top: 0px;
+ /* margin-left: -42px; */
+ list-style: none;
+ font-family: Robotobold;
+ font: 22px;
+ /* margin-left: -42px; */
+ margin-block-start: 0;
+ margin-block-end: 0;
+ padding-inline-start: 4px;
+}
+.trackbreadcrumb li {
+ float: left;
+}
+.trackbreadcrumb li a {
+ color: white;
+ font-family: Robotobold;
+ text-decoration: none;
+ padding: 10px 0 13px 41px;
+ background: #007dba; /* fallback color */
+ background: #007dba;
+ position: relative;
+ display: block;
+ float: left;
+ left: 0;
+}
+
+.trackbreadcrumb li a::after {
+ content: " ";
+ display: block;
+ width: 0;
+ height: 0;
+ border-top: 50px solid transparent; /* Go big on the size, and let overflow hide */
+ border-bottom: 50px solid transparent;
+ border-left: 30px solid #007dba;
+ position: absolute;
+ top: 50%;
+  margin-top: -50px; 
+ left: 99%;
+ z-index: 1;
+ font-family: Robotobold;
+}
+
+.trackbreadcrumb li a::before {
+ content: " ";
+ display: block;
+ width: 0;
+ height: 0;
+ border-top: 50px solid transparent;
+ border-bottom: 50px solid transparent;
+ border-left: 30px solid white;
+ position: absolute;
+ top: 50%;
+ margin-top: -50px;
+ margin-left: 1px;
+ left: 100%;
+ z-index: 1;
+}
+.track-title{
+ font-family: Robotoregular;
+}
+
+.trackbreadcrumb li:first-child a {
+ padding-left: 10px;
+ font-family: Robotobold;
+}
+.trackbreadcrumb li:nth-child(2) a {
+ background: #007dba;
+}
+.trackbreadcrumb li:nth-child(2) a:after {
+ border-left-color: #007dba;
+}
+.trackbreadcrumb li:nth-child(3) a {
+ background: #007dba;
+}
+.trackbreadcrumb li:nth-child(3) a:after {
+ border-left-color: #007dba;
+}
+/* .shadow {
+  border-top: 1px solid rgba(0, 0, 0, 0.54);
+}
+.shadow-bottom {
+  border-top: 1px solid rgba(0, 0, 0, 0.54);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.54);
+} */
+.ion-text-start {
+  text-align: center;
+}
+
+
+
+
+
+
+/* .row {
+  --border-bottom: solid 10px gray;
+} */
+.tracklist {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.54);
+  height: 64px;
+  
+}
+
+.trackActive {
+  font-family: Robotoregular;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: center;
+  
+  padding-top: 3px;
+  padding-bottom: 12px;
+  border: #57657A;
+  border: 5px;
+  margin-top: 0px;
+  border-width: 1px;
+  border-color: #57657A;
+ 
+  height: 50px;
+  text-align: center;
+  /* border-top: 1px solid rgba(0, 0, 0, 0.54);   */
+
+
+
+ 
+
+}
+
+ .active-btn{
+  font-family: Robotoregular;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: center;
+  
+  padding-top: 6px;
+  padding-bottom: 12px;
+  border: #57657A;
+  border: 5px;
+  margin-top: 0px;
+  height: 50px;
+  text-align: center;
+  border-width: 1px;
+  border-color: #57657A 
+
+}
+.alltrack-btn{
+  font-family: Robotoregular;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: center;
+  padding-top: 6px;
+  padding-bottom: 12px;
+  border: #57657A;
+  border: 5px;
+  margin-top: 0px;
+  height: 50px;
+  text-align: center;
+  border-width: 1px;
+  border-color: #57657A
+  
+  
+}
+
+
+/* .shadow {
+  border-top: 1px solid rgba(0, 0, 0, 0.54);
+} */
+
+
+.a{
+  color: #8a929d
+  
+}
+/* .content{
+  width: 375px;
+} */
+.icon-railcar{
+  width: 32px;
+  height: 32px;
+  float: right;
+  top: 16px;
+  bottom: 16px;
+  right: 8px;
+  
+}
+.track-toolbar-ios{
+  padding-top: env(safe-area-inset-top);
+  --background: rgba(0, 125, 186, 1);   
+}
+ .track {
+  position: absolute;
+  left:5px;
+   right: 70px;
+   bottom: 48%;
+   font-family: Robotomedium;
+   font-style: normal;
+   font-weight: 500;
+   font-size: 20px;
+   line-height: 28px;
+   color:#000000 ;
+   text-align: left;
+   top: 6%;
+   padding-bottom: 10px;
+   
+ }
+ .car {
+   position: relative;
+   left: 5px;
+   right: 70px;
+   top: 38%; 
+   /* padding-top: 10px; 
+   padding-bottom: 10px;
+   margin-top: 10px; */
+    bottom: 25%; 
+   /* margin-bottom: 10px; */
+   font-family: Robotomedium;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 24px;
+   font-size: 18px;
+   letter-spacing: 0.14px;
+   color: #8A929D;
+ }
+ :host{
+   border-color: #ffffff;
+
+ }
+ 
+
+ .ionsegmentclass{
+  --background: white;
+  --color: #30343a;
+  --background-checked: #007dba;
+  --color-checked: white;
+  border-radius: 0px !important;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: Roboto;
+  min-width: 50% !important;
+  text-transform: capitalize;
+ 
+  text-align: center;
+  font-family: Robotoregular;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: center;
+  padding-top: 6px;
+  
+  border-width: 1px;
+  border-color: #57657A;
+  margin-top: 0px;
+  height: 45px;
+  text-align: center;
+  
+
+
+ }
+ 
+ 
+ .toolbar-segment {
+
+  margin-top: 0px ;
+
+
+
+ }
+ ion-segment-button {
+  --background-checked: var(--ion-color-primary);
+  --color-checked: var(--ion-color-primary-contrast);
+  --indicator-color: transparent;
+}
+  ion-item  {
+  --border-color: white; 
+
+ } 
+ ion-list {
+   padding-top: 0px;
+ }
+ .list-md{
+   padding-top: 0px;
+ }
+
+/* .custom-item{
+  height: 67px;
+} */
+
+
+.custom-toolbar  {
+   padding: 8px 0px !important;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.54);
+   margin-bottom: 3px;
+}
+.custom-toolbar:after{
+  background: none;
+
+}
+.ios.custom-main-header {
+  height: 56px;
+  min-height: 100px;
+}
+
+/* .icon-inner{
+  padding-top: 1.9px;
+}
+ */
+ .ios.track-title {
+   left:0px;
+ }
+  .ios.toolbar-segment {
+   --padding-start: 0px; 
+   --padding-end: 0px; 
+ }
+.ion-page{
+  background: #ffffff;
+  
+}
+/* 
+.end-icon{
+  position: absolute;
+    right: 15px;
+    top: 3px;
+} */
+ .md-button-button-clear{
+   margin-left: 10px;
+ }
+ .sc-ion-buttons-md-s .button-clear{
+  margin-left: 12px !important;
+  /* margin-top: 12px; */
+ }
+ 
+
+ 
+
+  
+ 
+
+
+

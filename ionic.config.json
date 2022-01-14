@@ -1,0 +1,7 @@
+{
+  "name": "Ey",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
