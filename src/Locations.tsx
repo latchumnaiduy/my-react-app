@@ -39,26 +39,28 @@ import "@ionic/react/css/text-alignment.css";
 import "@ionic/react/css/text-transformation.css";
 import "@ionic/react/css/flex-utils.css";
 import "@ionic/react/css/display.css";
-import CustomHeader from "./components/customHeader";
+import CustomHeader from "./components/CustomHeader";
 
 /* Theme variables */
 import "./theme/variables.css";
 import "./theme/Locations.css";
 import "./theme/Cars.css";
 import { useState } from "react";
+import { locations } from "./utils/sample-data";
 const Locations: React.FC = () => {
-  let className  = 'location-list1';
   const history = useHistory();
-  const [location,setLocation]=useState('')
+  const [locationsList, setLocationsList] = useState([...locations]);
 
-  const navigateToTracks = () => {
-    history.push("/Tracks");
-   };
-
-  const  changeBgColor= (e:any) => {
-    setLocation(e.target.innerText);
+  const onSelectLocation = (location: any) => {
+    let locationsListClone = [...locationsList];
+    locationsListClone.map((x) => (x.active = false));
+    const INDEX = locationsListClone.findIndex((x) => x.name === location.name);
+    if (INDEX > -1) {
+      locationsListClone[INDEX].active = true;
+    }
+    setLocationsList(locationsListClone)
   };
-  let locations=["QUEST 1","QUEST 2","QUEST 3","QUEST 4","QUEST 5","QUEST 6","QUEST 7","QUEST 8","QUEST 9","QUEST 10","QUEST1 1","QUEST 12","QUEST 13"]
+
   return (
     <IonPage>
       <IonHeader class="location-tool-bar">
@@ -66,12 +68,14 @@ const Locations: React.FC = () => {
       </IonHeader>
       <IonContent>
         <IonList lines="full">
-          {locations.map(list=>(
-               <IonItem  className={list === location ? className:""} onClick={(event) => changeBgColor(event)}>
-               <IonText  class="locations" >
-                 {list}
-               </IonText>
-             </IonItem>
+          {locationsList.map((location, i) => (
+            <IonItem
+              key={`location-${i}`}
+              className={location?.active ? "active-location" : ""}
+              onClick={() => onSelectLocation(location)}
+            >
+              <IonText class="locations">{location.name}</IonText>
+            </IonItem>
           ))}
         </IonList>
       </IonContent>
@@ -80,4 +84,3 @@ const Locations: React.FC = () => {
 };
 
 export default Locations;
-

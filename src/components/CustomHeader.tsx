@@ -6,7 +6,7 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-
+import "./index.css";
 import { useHistory } from "react-router-dom";
 
 interface ChildProps {
@@ -15,8 +15,8 @@ interface ChildProps {
 const CustomHeader: React.FC<ChildProps> = ({ title }) => {
   let history = useHistory();
   return (
-    <IonHeader>
-      <IonToolbar class="cars-tool-bar">
+    <IonHeader className="ion-header">
+      <IonToolbar class="ion-header-toolbar">
         <IonButtons>
           <IonButton className="p-0">
             <IonIcon

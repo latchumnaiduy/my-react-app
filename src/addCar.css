@@ -1,0 +1,41 @@
+
+.ion-header {
+    background-color: #267dba;
+    color: #fff;
+}
+.ion-header-toolbar {
+    --background:#267dba;
+    --color: #fff;
+}
+.ion-col-item:not(:last-child){
+    border-bottom: 2px solid #e1e1e1;
+}
+.btn-save{
+    height: 40px;
+    background-color: #267dba;
+    color: #fff;
+    width: 48%;
+}
+.btn-cancel{
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid #267dba;
+    width: 48%;
+    color: #000;
+}
+.footer-btns {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.ion-footer {
+    background-color: #fff;
+    padding-top: 10px;
+    border-top: 1px solid #000;
+}
+.ion-breadcrumb-header{
+    background-color: #fff;
+    padding-bottom: 10px;
+}

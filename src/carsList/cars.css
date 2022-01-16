@@ -1,0 +1,71 @@
+.carName {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  display: block;
+  color: #000000;
+}
+.repairs {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  display: block;
+  /* identical to box height, or 133% */
+
+  letter-spacing: 0.14px;
+}
+.cars-list-left {
+  width: 50%;
+}
+.cars-list-right {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.cars-list {
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.add-repair {
+  height: 32px;
+}
+
+.btn-addcar {
+  height: 44px;
+  background-color: #007dba;
+  color: white;
+  width: 50%;
+  margin-left: 20px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+}
+.btn-reorder {
+  height: 44px;
+  background-color: transparent;
+  border: 1px solid #007dba;
+  width: 50%;
+  color: #007dba;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+}
+.footer-btns {
+  display: flex;
+  padding: 0 5px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.cars-footer {
+  background-color: white;
+  padding: 10px 20px 0 20px;
+}
+.p-0 {
+  --padding-start: 0 !important;
+}

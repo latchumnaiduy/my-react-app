@@ -1,0 +1,92 @@
+
+
+.ion-datepicker-btn{
+    border: 1px solid #e1e1e1;
+    height: 56px;
+}
+.ion-datepicker-inner-btn{
+    margin-left: -10px;
+}
+.my-custom-popover {
+    --width:80%;
+}
+.ion-item-btn {
+    --border-width:0;
+    --padding-start:0
+}
+.ion-label{
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.ion-label .required {
+    text-transform: capitalize !important;
+}
+.ion-header {
+  background-color: #267dba;
+  color: #fff;
+}
+.ion-header-toolbar {
+  --background:#267dba;
+  --color: #fff;
+  min-height: 56px;
+}
+.breadcrumbs{
+    overflow: hidden;
+    list-style-type:none;
+    width: 100%;
+    padding-left: 5px;
+    margin: 5px 0;
+  }
+ 
+  .breadcrumbs li{
+    float: left;
+    margin: 0 .5em 0 2em;
+}
+.breadcrumbs li:first-child {
+    margin-left: 0;
+}
+.breadcrumbs li:first-child a::before{
+    display: none;
+}
+
+  .breadcrumbs a{
+    background-color: #267dba;
+    color: #fff;
+    padding: .3em 1em;
+    float: left;
+    text-decoration: none;
+    position: relative;
+}
+.breadcrumbs a p {
+  margin:0
+}
+
+
+  .breadcrumbs a::before{
+    content: ""; 
+    position: absolute;
+    top: 50%;
+    margin-top: -2em;
+    border-width: 2em 0px 2em 2em;
+    border-style: solid;
+    border-color: #267dba #267dba #267dba transparent;
+    left: -1.9em;
+  }
+
+
+
+  .breadcrumbs a::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -2em;
+    border-top: 2em solid transparent;
+    border-bottom: 2em solid transparent;
+    border-left: 2.5em solid #267dba;
+    right: -1.9em;
+  }
+
+  .breadcrumbs a:hover::after{
+    border-left-color: #99db76;
+  }
+

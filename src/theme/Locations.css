@@ -48,7 +48,7 @@ font-family: Robotoregular;
 .p-0 {
   --padding-start: 0 !important;
 }
-.location-list1{
+.active-location{
   --border-color:rgba(0, 0, 0, 0.54);
   height: 56px;
   --background:rgba(0, 125, 186, 1);
