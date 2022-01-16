@@ -3,6 +3,7 @@ import {
   IonButtons,
   IonHeader,
   IonIcon,
+  IonText,
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
@@ -25,10 +26,10 @@ const CustomHeader: React.FC<ChildProps> = ({ title }) => {
               onClick={() => history.goBack()}
             />
           </IonButton>
-        </IonButtons>
-        <IonTitle class="cars-title" className="p-0">
+        <IonText class="cars-title" className="p-0">
           {title}
-        </IonTitle>
+        </IonText>
+        </IonButtons>
         <IonButtons slot="primary" >
           <IonButton  slot="start" class="menu">
             <IonIcon slot="end" class="menu-btn" src="assets/More-Vertical.svg" />
