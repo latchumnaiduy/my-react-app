@@ -21,3 +21,6 @@
 *{
     font-family: Roboto;
 }
+input {
+    padding-left: 10px;
+}

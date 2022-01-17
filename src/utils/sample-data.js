@@ -13,7 +13,7 @@ export const formItems = [
   },
   {
     label: "CAR INITIAL",
-    inputType: "number",
+    inputType: "text",
     isRequired: true,
     validations: {},
   },
