@@ -37,6 +37,7 @@
 .ion-item-btn {
   --border-width: 0;
   --padding-start: 0;
+  --ripple-color: transparent;
 }
 .ion-cars-label {
   text-transform: uppercase;
@@ -75,6 +76,11 @@
   /* Light UI/Primary */
   color: #000000;
   margin-left: 8px;
+}
+.add-car-checkbox {
+  --background-checked: #99cbe3;
+  --border-color: #99cbe3;
+  --border-color-checked:#99cbe3;
 }
 .ion-header {
   background-color: #267dba;

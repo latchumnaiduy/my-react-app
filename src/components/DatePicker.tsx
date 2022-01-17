@@ -6,6 +6,7 @@ import {
     IonPopover,
     IonDatetime,
     IonLabel,
+    IonImg,
   } from "@ionic/react";
   import { calendar } from "ionicons/icons";
   import React, { useState } from "react";
@@ -45,7 +46,8 @@ import {
         >
           <IonInput value={popoverDate} className="ion-datepicker-input" />
           <IonLabel  className="ion-datepicker-inner-btn">
-            <IonIcon className="ion-datepicker-inner-btn-icon" icon={calendar} />
+            {/* <IonIcon className="ion-datepicker-inner-btn-icon" icon={calendar} /> */}
+            <IonImg className="ion-datepicker-inner-btn-icon" src="assets/calendar.svg"></IonImg>
           </IonLabel>
         </IonButton>
       </IonButton>

@@ -76,7 +76,7 @@ export const FormInputItems: React.FC<IProps> = ({ formItems }) => {
               key={`${formItems?.label}-${i}`}
               className="ion-item-btn"
             >
-              <IonCheckbox />
+              <IonCheckbox className="add-car-checkbox"/>
               <IonLabel className="add-car-statusCard-label">{item?.label}</IonLabel>
             </IonItem>
           );
