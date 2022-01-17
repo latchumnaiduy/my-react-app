@@ -11,7 +11,14 @@ import {
   import { calendar } from "ionicons/icons";
   import React, { useState } from "react";
   import "./index.css";
+  import { format, parseISO } from 'date-fns';
+
   export const DatePicker: React.FC = () => {
+
+    const formatDate = (value: string) => {
+      return format(parseISO(value), 'MM/dd/yyyy');
+    };
+  
     const [popoverDate, setPopoverDate] = useState("");
     const [popoverState, setShowPopover] = useState({
       showPopover: false,
@@ -30,7 +37,7 @@ import {
           <IonDatetime
             presentation="date"
             onIonChange={(ev) => {
-              setPopoverDate(ev.detail.value!);
+              setPopoverDate(formatDate(ev.detail.value!));
               setShowPopover({ showPopover: false, event: undefined });
             }}
           />
