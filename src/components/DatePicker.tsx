@@ -5,6 +5,7 @@ import {
     IonIcon,
     IonPopover,
     IonDatetime,
+    IonLabel,
   } from "@ionic/react";
   import { calendar } from "ionicons/icons";
   import React, { useState } from "react";
@@ -35,15 +36,17 @@ import {
         </IonPopover>
         <IonButton
           fill="clear"
+          expand="full"
+          className="ion-datepicker-inputBtn"
           onClick={(e: any) => {
             e.persist();
             setShowPopover({ showPopover: true, event: e });
           }}
         >
-          <IonInput value={popoverDate} />
-          <IonButton fill="clear" className="ion-datepicker-inner-btn">
-            <IonIcon icon={calendar} />
-          </IonButton>
+          <IonInput value={popoverDate} className="ion-datepicker-input" />
+          <IonLabel  className="ion-datepicker-inner-btn">
+            <IonIcon className="ion-datepicker-inner-btn-icon" icon={calendar} />
+          </IonLabel>
         </IonButton>
       </IonButton>
     );

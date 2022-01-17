@@ -15,8 +15,8 @@ export const Breadcrumbs: React.FC<ChildProps> = ({ breadCrumbItems }) => (
       return (
         <li key={`bread-crub-${i}`}>
           <a href={item?.path}>
-            <p>{item?.name}</p>
-            <p>{item?.value}</p>
+            <p className="breadcrumb-title">{item?.name}</p>
+            <p className="breadcrumb-text">{item?.value}</p>
           </a>
         </li>
       );

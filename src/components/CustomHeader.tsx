@@ -3,6 +3,7 @@ import {
   IonButtons,
   IonHeader,
   IonIcon,
+  IonLabel,
   IonText,
   IonTitle,
   IonToolbar,
@@ -19,21 +20,21 @@ const CustomHeader: React.FC<ChildProps> = ({ title }) => {
     <IonHeader className="ion-header">
       <IonToolbar class="ion-header-toolbar">
         <IonButtons>
-          <IonButton className="p-0">
+          <IonLabel className="p-0">
             <IonIcon
               class="back-btn"
               src="assets/arrow_back_24px.svg"
               onClick={() => history.goBack()}
             />
-          </IonButton>
+          </IonLabel>
         <IonText class="cars-title" className="p-0">
           {title}
         </IonText>
         </IonButtons>
         <IonButtons slot="primary" >
-          <IonButton  slot="start" class="menu">
+          <IonLabel  slot="start" class="menu">
             <IonIcon slot="end" class="menu-btn" src="assets/More-Vertical.svg" />
-          </IonButton>
+          </IonLabel>
         </IonButtons>
       </IonToolbar>
     </IonHeader>

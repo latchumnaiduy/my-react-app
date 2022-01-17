@@ -80,7 +80,7 @@ const AddCar: React.FC = () => {
       </IonContent>
       <IonFooter className="ion-footer">
         <div className="footer-btns">
-          <button className="btn-save">Save and Add Repairs</button>
+          <button className="btn-save" disabled>Save and Add Repairs</button>
           <button className="btn-save">Save and Add Next Car</button>
         </div>
         <div className="footer-btns">

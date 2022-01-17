@@ -36,7 +36,7 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonRouterOutlet>
         {/* <Locations/> */}
-        <AddCar/>
+        <Cars/>
         {/* <Route path="add-car" component={AddCar} exact={true}/>
           <Route path="/Locations" component={Locations} exact={true}/>
         <Route path="/Tracks" component={Track} exact={true}/>
