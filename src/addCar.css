@@ -50,5 +50,6 @@ color: #FFFFFF;
 }
 .ion-breadcrumb-header{
     background-color: #fff;
-    padding-bottom: 10px;
+    /* padding-bottom: 7px; */
+    margin-bottom: 7px;
 }

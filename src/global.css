@@ -19,7 +19,7 @@
 @import "./theme/Locations.css";
 @import "./theme/Cars.css";
 *{
-    font-family: Roboto;
+    font-family: "Robotobold";
 }
 input {
     padding-left: 10px;

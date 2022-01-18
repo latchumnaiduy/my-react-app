@@ -63,10 +63,10 @@ const Locations: React.FC = () => {
 
   return (
     <IonPage>
-      <IonHeader class="location-tool-bar">
+      {/* <IonHeader class="location-tool-bar"> */}
         <CustomHeader title="Locations"></CustomHeader>
-      </IonHeader>
-      <IonContent>
+      {/* </IonHeader> */}
+      <IonContent fullscreen className="has-header">
         <IonList lines="full">
           {locationsList.map((location, i) => (
             <IonItem
@@ -79,6 +79,7 @@ const Locations: React.FC = () => {
           ))}
         </IonList>
       </IonContent>
+      <IonFooter class="cars-footer"></IonFooter>
     </IonPage>
   );
 };

@@ -85,6 +85,7 @@
 .ion-header {
   background-color: #267dba;
   color: #fff;
+  height: 56px;
 }
 .ion-breadcrumb-header::after {
   background-image:none;
@@ -95,8 +96,10 @@
 .ion-header-toolbar {
   --background: #267dba;
   --color: #fff;
-  min-height: 56px;
+  height: 56px;
   padding-left: 17px;
+  display: flex;
+    align-items: center;
 }
 .breadcrumbs {
   overflow: hidden;
