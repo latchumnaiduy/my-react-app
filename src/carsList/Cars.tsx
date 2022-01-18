@@ -72,13 +72,13 @@ const Cars: React.FC = () => {
           {carslist.map((car, i) => {
             return (
               // <IonReorder  key={`cars-list-${i}`}>
-              <IonItem key={`cars-list-${i}`} className="cars-list">
+              <IonItem key={`cars-list-${i}`} className="cars-list" lines="none">
                 <div className="cars-list-left">
                   <IonText className="carName">{car.car_name}</IonText>
                   <IonText className="repairs">Repairs: {car.repairs}</IonText>
                 </div>
                 <div className="cars-list-right">
-                  <IonText className="repairs">{car.date}</IonText>
+                  <IonText className="repairs repairs-date">{car.date}</IonText>
                   <div>
                     <div>
                       <IonImg src="assets/alert.svg"></IonImg>

@@ -14,10 +14,14 @@
   font-size: 18px;
   line-height: 24px;
   display: block;
-  margin-top: 10px;
+  padding-top: 12px;
   /* identical to box height, or 133% */
 
   letter-spacing: 0.14px;
+}
+.repairs-date{
+  margin-top: 10px;
+  padding-top: 5px;
 }
 .cars-list-left {
   width: 50%;
@@ -30,7 +34,8 @@
 .cars-list {
     justify-content: space-between;
     margin-bottom: 7px;
-    height: 65px;
+    height: 64px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.54)
 }
 .add-repair {
   height: 32px;
