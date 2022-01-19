@@ -42,7 +42,10 @@ import { carsList } from "../utils/sample-data";
 const Cars: React.FC = () => {
   let history = useHistory();
   const navigateToAddcar = () => {
-    history.push("/AddCar");
+    history.push("/add-car");
+  };
+  const navigateToRepaircar = () => {
+    history.push("/add-repair");
   };
   const breadCrumbItems = [
     {
@@ -82,6 +85,8 @@ const Cars: React.FC = () => {
                 </div>
                 <div className="cars-list-right">
                   <IonText className="repairs repairs-date">{car.date}</IonText>
+                  {
+                    carsReorder &&
                   <div>
                     <div>
                       <IonImg src="assets/alert.svg"></IonImg>
@@ -90,10 +95,11 @@ const Cars: React.FC = () => {
                       <IonImg src="assets/flag.svg"></IonImg>
                     </div>
                   </div>
+                  }
                 <IonImg
                     className="add-repair"
                     src="assets/add_repair.svg"
-                    onClick={ navigateToAddcar }
+                    onClick={() => navigateToRepaircar}
                   ></IonImg>
                 </div>
                 <IonReorder slot="end">
@@ -110,7 +116,7 @@ const Cars: React.FC = () => {
           {carsReorder ? 
           <>
           <button className="btn-reorder" onClick={() => {setCarsReorder(false)}}>Reorder</button>
-          <button className="btn-addcar">Add Car</button>
+          <button className="btn-addcar" onClick={() => navigateToAddcar}>Add Car</button>
           </>
           :
           <>

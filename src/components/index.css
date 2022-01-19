@@ -2,10 +2,15 @@
   border: 1px solid #C7D4DD;
   height: 44px;
   position: relative;
-  --padding-end: 0;
+  /* --padding-end: 0;
   --padding-start: 0;
   margin-left: 3px;
-  margin-right: 3px;
+  margin-right: 3px; */
+}
+.ion-custom-datepicker{
+  --padding-end: 0;
+  --padding-start: 0; 
+  margin: 0;
 }
 .ion-datepicker-inner-btn {
   margin-left: -10px;
@@ -38,12 +43,26 @@
 .ion-item-btn {
   --border-width: 0;
   --padding-start: 0;
+  --padding-end:0;
   --ripple-color: transparent;
+}
+.ion-item-btn-label{
+  --border-width: 0;
+  --padding-start: 0;
+  --padding-end:0;
+  display: flex !important;
+  align-items: center;
+  width: 100%;
+  justify-content: end;
+  margin-right: 0;
+}
+.ml-8{
+  margin-left: 8px;
 }
 .ion-cars-label {
   text-transform: uppercase;
   margin-bottom: 5px;
-  font-family: Robotomedium;
+  font-family: Robotomedium !important;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -59,11 +78,11 @@
   background: #ffffff;
   box-shadow: 0px 6px 6px rgba(29, 46, 64, 0.1),
     0px 0px 6px rgba(29, 46, 64, 0.1);
-  padding: 10px 15px 10px 21px;
+  padding: 10px 15px 0 21px;
   margin: 0;
   margin-top: 5px;
   margin-bottom: 5px;
-  height: 210px;
+  /* height: 210px; */
   min-height: 10px;
 }
 .add-car-statusCard-label {
@@ -97,7 +116,7 @@
 .ion-header-toolbar {
   --background: #267dba;
   --color: #fff;
-  height: 56px;
+  min-height: 56px;
   padding-left: 17px;
   display: flex;
     align-items: center;
@@ -198,14 +217,26 @@
   --handle-background-checked: #66B1D5;
   --handle-height: 20px;
   --handle-width: 20px;
-  /* --handle-width: 20px; */
-  /* position: absolute; */
-/* width: 106px; */
-/* height: 20px; */
-/* left: 190px; */
-/* top: calc(50% - 20px/2); */
 }
 .ion-selectdropdown{width: 50px;
   height: 18px;
   opacity: 100;
+}
+.mb-10{
+  margin-bottom: 10px;
+}
+.searchbar-input{
+  display: block !important;
+  width: 100% !important;
+}
+.h-auto{
+  height: auto !important;
+}
+.search-results {
+  background: #FFFFFF;
+/* Light UI/Elevation/M */
+
+box-shadow: 0px 6px 6px rgba(29, 46, 64, 0.1), 0px 0px 6px rgba(29, 46, 64, 0.1);
+margin-top: 7px;
+padding: 10px;
 }

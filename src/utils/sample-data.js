@@ -83,7 +83,7 @@ export const formItems = [
   },
   {
     label: "OWNER",
-    inputType: "text",
+    inputType: "searchBar",
     isRequired: false,
     validations: {},
     options: [],

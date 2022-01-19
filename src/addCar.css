@@ -9,6 +9,11 @@
 .ion-col-item:not(:last-child) {
   border-bottom: 1px solid rgba(0, 0, 0, 0.54);
 }
+.ion-col-item{
+  padding-bottom:12px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 .btn-save {
   height: 44px;
   background-color: #267dba;

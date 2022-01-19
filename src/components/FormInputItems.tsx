@@ -1,5 +1,6 @@
 import React from "react";
 import { DatePicker } from "./DatePicker";
+import {SearchBar} from "./SearchBar";
 import { formItemsType } from "../utils/addCarType";
 import {
   IonCard,
@@ -34,6 +35,13 @@ export const FormInputItems: React.FC<IProps> = ({ formItems }) => {
         className="ion-datepicker-btn"
       ></IonInput>
     </>
+  ): formItems.inputType === "searchBar" ? (
+    <>
+      <IonLabel className="ion-cars-label">
+        {formItems?.label} {formItems?.isRequired && <span className="required">(Required)</span>}
+      </IonLabel>
+      <SearchBar/>
+    </>
   ) : formItems.inputType === "select" ? (
     <>
       <IonLabel className="ion-cars-label">
@@ -59,10 +67,10 @@ export const FormInputItems: React.FC<IProps> = ({ formItems }) => {
       <IonLabel className="ion-cars-label">
         {formItems?.label} {formItems?.isRequired && <span className="required">(Required)</span>}
       </IonLabel>
-      <IonItem type="button" lines="none" className="ion-item-btn">
+      <IonLabel className="ion-item-btn-label">
       <IonToggle className="add-car-toggle"/>
-      <IonLabel>{formItems?.secondary_label}</IonLabel>
-      </IonItem>
+      <IonLabel className="ml-8">{formItems?.secondary_label}</IonLabel>
+      </IonLabel>
     </IonItem>
   ) : formItems.inputType === "checkbox" ? (
     <>
@@ -75,7 +83,7 @@ export const FormInputItems: React.FC<IProps> = ({ formItems }) => {
               type="button"
               lines="none"
               key={`${formItems?.label}-${i}`}
-              className="ion-item-btn"
+              className="ion-item-btn mb-10"
             >
               <IonCheckbox className="add-car-checkbox" />
               <IonLabel className="add-car-statusCard-label">{item?.label}</IonLabel>

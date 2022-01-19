@@ -38,14 +38,15 @@ const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
-    <AddRepair/>
-        {/* <Cars/> */}
+    {/* <AddRepair/> */}
+        <Cars/>
         {/* <Locations/> */}
-        <AddCar/>
-        {/* <Route path="add-car" component={AddCar} exact={true}/> */}
-          {/* <Route path="/Locations" component={Locations} exact={true}/> */}
-        {/* <Route path="/Cars" component={Cars} exact={true}/> */}
-        {/* <Route path="/Cars" component={Cars} exact={true}/> */}
+        {/* <AddCar/> */}
+        <Route path="add-car" component={AddCar} exact={true}/> 
+          <Route path="/Locations" component={Locations} exact={true}/>
+        <Route path="/Cars" component={Cars} exact={true}/>
+       {/* <Route path="/Cars" component={Cars} exact={true}/> */}
+       <Route path="/add-repair" component={AddRepair} exact={true}/>
 
         {/* <Redirect path="" to="/add-car"  /> */}
       </IonRouterOutlet> 

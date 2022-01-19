@@ -25,7 +25,7 @@ import {
       event: undefined,
     });
     return (
-      <IonButton fill="clear" expand="full" className="ion-datepicker-btn">
+      <IonButton fill="clear" expand="full" className="ion-datepicker-btn ion-custom-datepicker">
         <IonPopover
           className="my-custom-popover"
           event={popoverState.event}
