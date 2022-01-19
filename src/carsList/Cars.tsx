@@ -41,8 +41,8 @@ import { carsList } from "../utils/sample-data";
 
 const Cars: React.FC = () => {
   let history = useHistory();
-  const navigateToCars = () => {
-    history.push("/Cars");
+  const navigateToAddcar = () => {
+    history.push("/AddCar");
   };
   const breadCrumbItems = [
     {
@@ -55,6 +55,11 @@ const Cars: React.FC = () => {
       value: "Track",
       path: "/track1",
     },
+    // {
+    //   name: "car name",
+    //   value: "BMX 5689",
+    //   path: "/track1",
+    // },
   ];
   const [carslist, setCarsList] = useState([...carsList]);
   const [carsReorder,setCarsReorder] = useState(true);
@@ -67,11 +72,9 @@ const Cars: React.FC = () => {
         <Breadcrumbs breadCrumbItems={breadCrumbItems}></Breadcrumbs>
       </IonHeader>
       <IonContent fullscreen>
-        {/* <IonList lines="full"> */}
         <IonReorderGroup disabled={carsReorder} >
           {carslist.map((car, i) => {
             return (
-              // <IonReorder  key={`cars-list-${i}`}>
               <IonItem key={`cars-list-${i}`} className="cars-list" lines="none">
                 <div className="cars-list-left">
                   <IonText className="carName">{car.car_name}</IonText>
@@ -87,20 +90,20 @@ const Cars: React.FC = () => {
                       <IonImg src="assets/flag.svg"></IonImg>
                     </div>
                   </div>
-                  <IonImg
+                <IonImg
                     className="add-repair"
                     src="assets/add_repair.svg"
+                    onClick={ navigateToAddcar }
                   ></IonImg>
                 </div>
                 <IonReorder slot="end">
           <IonIcon icon={reorderFour} />
         </IonReorder>
               </IonItem>
-                // </IonReorder>
             );
           })}
           </IonReorderGroup>
-        {/* </IonList> */}
+        
       </IonContent>
       <IonFooter class="cars-footer">
         <div className="footer-btns">

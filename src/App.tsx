@@ -23,10 +23,13 @@ import "./global.css";
 import './theme/variables.css';
 import Locations from './Locations';
 import Cars from './carsList/Cars';
-import Track from './Track';
+
 import Auth from './Authentication/Auth';
 import Pin from './Login/Pin'
 import AddCar from './AddCar';
+import AddRepair from './AddRepair';
+
+
 
 setupIonicReact();
 
@@ -35,13 +38,16 @@ const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
-        <Cars/>
-        {/* <AddCar/> */}
-        {/* <Route path="add-car" component={AddCar} exact={true}/>
-          <Route path="/Locations" component={Locations} exact={true}/>
-        <Route path="/Tracks" component={Track} exact={true}/>
-        <Route path="/Cars" component={Cars} exact={true}/>
-        <Redirect path="" to="/add-car"  /> */}
+    <AddRepair/>
+        {/* <Cars/> */}
+        {/* <Locations/> */}
+        <AddCar/>
+        {/* <Route path="add-car" component={AddCar} exact={true}/> */}
+          {/* <Route path="/Locations" component={Locations} exact={true}/> */}
+        {/* <Route path="/Cars" component={Cars} exact={true}/> */}
+        {/* <Route path="/Cars" component={Cars} exact={true}/> */}
+
+        {/* <Redirect path="" to="/add-car"  /> */}
       </IonRouterOutlet> 
     </IonReactRouter>
   </IonApp>

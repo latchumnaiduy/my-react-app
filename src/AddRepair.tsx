@@ -35,11 +35,11 @@ import "./theme/Locations.css";
 import "./theme/Cars.css";
 import CustomHeader from "./components/CustomHeader";
 
-import { formItems } from "./utils/sample-data.js";
+import { addRepairItems, formItems } from "./utils/sample-data.js";
 import { FormInputItems } from "./components/FormInputItems";
 import { formItemsType } from "./utils/addCarType";
 
-const AddCar: React.FC = () => {
+const AddRepair: React.FC = () => {
   const breadCrumbItems = [
     {
       name: "Location",
@@ -51,12 +51,17 @@ const AddCar: React.FC = () => {
       value: "Track",
       path: "/track1",
     },
+    // {
+    //   name: "car name",
+    //   value: "BMX 5689",
+    //   path: "/track1",
+    // },
   ];
-  const formItemsClone: formItemsType[] = [...formItems];
+  const formItemsClone: formItemsType[] = [...addRepairItems];
   return (
     <IonPage>
       <IonHeader class="location-tool-bar">
-        <CustomHeader title="Add Car"></CustomHeader>
+        <CustomHeader title="Add Repair"></CustomHeader>
       </IonHeader>
       <IonHeader className="ion-breadcrumb-header">
         <Breadcrumbs breadCrumbItems={breadCrumbItems}></Breadcrumbs>
@@ -81,10 +86,6 @@ const AddCar: React.FC = () => {
       </IonContent>
       <IonFooter className="ion-footer">
         <div className="footer-btns">
-          <button className="btn-save" disabled>Save and Add Repairs</button>
-          <button className="btn-save">Save and Add Next Car</button>
-        </div>
-        <div className="footer-btns">
           <button className="btn-save btn-cancel">Cancel</button>
           <button className="btn-save">Save </button>
         </div>
@@ -93,4 +94,4 @@ const AddCar: React.FC = () => {
   );
 };
 
-export default AddCar;
+export default AddRepair;

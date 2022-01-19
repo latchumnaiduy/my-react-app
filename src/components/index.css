@@ -1,19 +1,22 @@
 .ion-datepicker-btn {
-  border: 1px solid #e1e1e1;
+  border: 1px solid #C7D4DD;
   height: 44px;
   position: relative;
   --padding-end: 0;
   --padding-start: 0;
+  margin-left: 3px;
+  margin-right: 3px;
 }
 .ion-datepicker-inner-btn {
   margin-left: -10px;
   color: #000000;
   position: absolute;
-  right: 0;
+  right: -10px;
 }
 .ion-datepicker-inner-btn-icon {
-  height: 19px;
-  width: 19px;
+  height: 24px;
+  width: 24px;
+  margin-left: 100px;
 }
 .ion-datepicker-inputBtn {
   position: absolute;
@@ -22,13 +25,11 @@
 }
 .ion-datepicker-input {
   text-align: left;
-  font-family: Roboto;
+  font-family: Robotomedium;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
-  /* identical to box height, or 125% */
-  /* Light UI/Primary */
   color: #000000;
 }
 .my-custom-popover {
@@ -42,29 +43,28 @@
 .ion-cars-label {
   text-transform: uppercase;
   margin-bottom: 5px;
-  font-family: Roboto;
+  font-family: Robotomedium;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
-  /* identical to box height, or 133% */
   letter-spacing: 0.14px;
-  /* Light UI/Secondary */
   color: #57657a !important;
 }
 .ion-cars-label .required {
   text-transform: capitalize !important;
+
 }
 .add-car-statusCard {
-  /* Light UI/Main */
   background: #ffffff;
-  /* Light UI/Elevation/M */
   box-shadow: 0px 6px 6px rgba(29, 46, 64, 0.1),
     0px 0px 6px rgba(29, 46, 64, 0.1);
   padding: 10px 15px 10px 21px;
   margin: 0;
   margin-top: 5px;
   margin-bottom: 5px;
+  height: 210px;
+  min-height: 10px;
 }
 .add-car-statusCard-label {
   font-family: Roboto;
@@ -78,9 +78,10 @@
   margin-left: 8px;
 }
 .add-car-checkbox {
-  --background-checked: #99cbe3;
-  --border-color: #99cbe3;
-  --border-color-checked:#99cbe3;
+  --background-checked: #007DBA;
+  --border-color: #007DBA;
+  --border-color-checked:#66B1D5;
+  --border-radius:15px;
 }
 .ion-header {
   background-color: #267dba;
@@ -108,7 +109,6 @@
   padding-left: 5px;
   margin: 5px 0;
 }
-
 .breadcrumbs li {
   float: left;
   margin: 0 0.5em 0 2em;
@@ -121,7 +121,7 @@
 }
 
 .breadcrumbs a {
-  background-color: #267dba;
+  background-color: #007DBA;
   color: #fff;
   padding: 0.3em 1em;
   float: left;
@@ -155,10 +155,10 @@
 }
 
 .breadcrumbs a:hover::after {
-  border-left-color: #99db76;
+  border-left-color: #267dba;
 }
 .breadcrumb-text {
-  font-family: Roboto;
+  font-family: Robotomedium;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -167,7 +167,7 @@
   color: #ffffff;
 }
 .breadcrumb-title {
-  font-family: Roboto;
+  font-family: Robotobold;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -178,7 +178,7 @@
 }
 .cars-title {
   margin-left: 35px;
-  font-family: Roboto;
+  font-family: Robotoregular;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -187,20 +187,25 @@
   color: #ffffff;
 }
 .back-btn {
-  width: 20px;
-  height: 20px;
-}
-/* .back-btn {
-  width: 20px;
-  height: 20px;
-}
-.menu-btn {
-  height: 30px;
   width: 30px;
-} */
+  height: 30px;
+  /* margin-left: 12px; */
+}
+
 .add-car-toggle {
-  --background-checked: #99cbe3;
-  --handle-background-checked: #99cbe3;
+  --background:#CCE5F1;
+  --background-checked: #66B1D5;
+  --handle-background-checked: #66B1D5;
   --handle-height: 20px;
   --handle-width: 20px;
+  /* --handle-width: 20px; */
+  /* position: absolute; */
+/* width: 106px; */
+/* height: 20px; */
+/* left: 190px; */
+/* top: calc(50% - 20px/2); */
+}
+.ion-selectdropdown{width: 50px;
+  height: 18px;
+  opacity: 100;
 }

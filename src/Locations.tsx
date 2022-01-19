@@ -40,11 +40,10 @@ import "@ionic/react/css/text-transformation.css";
 import "@ionic/react/css/flex-utils.css";
 import "@ionic/react/css/display.css";
 import CustomHeader from "./components/CustomHeader";
-
 /* Theme variables */
-import "./theme/variables.css";
+// import "./theme/variables.css";
 import "./theme/Locations.css";
-import "./theme/Cars.css";
+// import "./theme/Cars.css";
 import { useState } from "react";
 import { locations } from "./utils/sample-data";
 const Locations: React.FC = () => {
@@ -59,6 +58,7 @@ const Locations: React.FC = () => {
       locationsListClone[INDEX].active = true;
     }
     setLocationsList(locationsListClone)
+    history.push('/Cars')
   };
 
   return (
@@ -74,7 +74,7 @@ const Locations: React.FC = () => {
               className={location?.active ? "active-location" : ""}
               onClick={() => onSelectLocation(location)}
             >
-              <IonText class="locations">{location.name}</IonText>
+              <IonText class="locations" className="p-0">{location.name}</IonText>
             </IonItem>
           ))}
         </IonList>

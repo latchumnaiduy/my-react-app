@@ -17,7 +17,7 @@ interface ChildProps {
 const CustomHeader: React.FC<ChildProps> = ({ title }) => {
   let history = useHistory();
   return (
-    <IonHeader className="ion-header">
+    <IonHeader className="ion-header" >
       <IonToolbar class="ion-header-toolbar">
         <IonButtons>
           <IonLabel className="p-0">

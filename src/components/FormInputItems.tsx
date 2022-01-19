@@ -10,6 +10,7 @@ import {
   IonSelect,
   IonSelectOption,
   IonToggle,
+  IonImg
 } from "@ionic/react";
 interface IProps {
   formItems: formItemsType;
@@ -19,14 +20,14 @@ export const FormInputItems: React.FC<IProps> = ({ formItems }) => {
   return formItems.inputType === "date" ? (
     <>
       <IonLabel className="ion-cars-label">
-        {formItems?.label} {formItems?.isRequired && <span className="required">(REQUIRED)</span>}
+        {formItems?.label} {formItems?.isRequired && <span className="required">(Required)</span>}
       </IonLabel>
       <DatePicker></DatePicker>
     </>
   ) : formItems.inputType === "number" || formItems.inputType === "text" ? (
     <>
       <IonLabel className="ion-cars-label">
-        {formItems?.label} {formItems?.isRequired && <span className="required">(REQUIRED)</span>}
+        {formItems?.label} {formItems?.isRequired && <span className="required">(Required)</span>}
       </IonLabel>
       <IonInput
         type={formItems.inputType}
@@ -36,7 +37,7 @@ export const FormInputItems: React.FC<IProps> = ({ formItems }) => {
   ) : formItems.inputType === "select" ? (
     <>
       <IonLabel className="ion-cars-label">
-        {formItems?.label} {formItems?.isRequired && <span className="required">(REQUIRED)</span>}
+        {formItems?.label} {formItems?.isRequired && <span className="required">(Required)</span>}
       </IonLabel>
       <IonSelect
         okText="Select"
@@ -56,7 +57,7 @@ export const FormInputItems: React.FC<IProps> = ({ formItems }) => {
   ) : formItems.inputType === "toggle" ? (
     <IonItem type="button" lines="none" className="ion-item-btn">
       <IonLabel className="ion-cars-label">
-        {formItems?.label} {formItems?.isRequired && <span className="required">(REQUIRED)</span>}
+        {formItems?.label} {formItems?.isRequired && <span className="required">(Required)</span>}
       </IonLabel>
       <IonItem type="button" lines="none" className="ion-item-btn">
       <IonToggle className="add-car-toggle"/>
@@ -76,10 +77,10 @@ export const FormInputItems: React.FC<IProps> = ({ formItems }) => {
               key={`${formItems?.label}-${i}`}
               className="ion-item-btn"
             >
-              <IonCheckbox className="add-car-checkbox"/>
+              <IonCheckbox className="add-car-checkbox" />
               <IonLabel className="add-car-statusCard-label">{item?.label}</IonLabel>
             </IonItem>
-          );
+          )
         })}
         </IonCard>
     </>
