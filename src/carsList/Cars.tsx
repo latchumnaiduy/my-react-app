@@ -74,10 +74,11 @@ const Cars: React.FC = () => {
   ];
   const [carslist, setCarsList] = useState([...carsList]);
   const [carsReorder, setCarsReorder] = useState(true);
+  const [headerTitle, setHeaderTitle] = useState('Cars');
   return (
     <IonPage>
       <IonHeader>
-        <CustomHeader title="Cars"></CustomHeader>
+        <CustomHeader title={headerTitle}></CustomHeader>
       </IonHeader>
       <IonHeader className="ion-breadcrumb-header">
         <Breadcrumbs breadCrumbItems={breadCrumbItems}></Breadcrumbs>
@@ -130,6 +131,7 @@ const Cars: React.FC = () => {
               <button
                 className="btn-reorder"
                 onClick={() => {
+                  setHeaderTitle('Reorder Cars');
                   setCarsReorder(false);
                 }}
               >
@@ -144,6 +146,7 @@ const Cars: React.FC = () => {
               <button
                 className="btn-reorder"
                 onClick={() => {
+                  setHeaderTitle('Cars');
                   setCarsReorder(true);
                 }}
               >
@@ -152,6 +155,7 @@ const Cars: React.FC = () => {
               <button
                 className="btn-addcar"
                 onClick={() => {
+                  setHeaderTitle('Cars');
                   setCarsReorder(true);
                 }}
               >

@@ -7,6 +7,9 @@
   margin-left: 3px;
   margin-right: 3px; */
 }
+.ion-datepicker-btn.has-focus{
+  border: 1px solid #007DBA;
+}
 .ion-custom-datepicker{
   --padding-end: 0;
   --padding-start: 0; 
