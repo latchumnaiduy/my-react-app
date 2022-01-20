@@ -29,7 +29,15 @@ import {
 import { StatusBar, Style } from "@capacitor/status-bar";
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
-import { warning, move, navigate, trash, camera, pizza, reorderFour } from "ionicons/icons";
+import {
+  warning,
+  move,
+  navigate,
+  trash,
+  camera,
+  pizza,
+  reorderFour,
+} from "ionicons/icons";
 
 /* Basic CSS for apps built with Ionic */
 import "../global.css";
@@ -65,7 +73,7 @@ const Cars: React.FC = () => {
     // },
   ];
   const [carslist, setCarsList] = useState([...carsList]);
-  const [carsReorder,setCarsReorder] = useState(true);
+  const [carsReorder, setCarsReorder] = useState(true);
   return (
     <IonPage>
       <IonHeader>
@@ -75,55 +83,82 @@ const Cars: React.FC = () => {
         <Breadcrumbs breadCrumbItems={breadCrumbItems}></Breadcrumbs>
       </IonHeader>
       <IonContent fullscreen>
-        <IonReorderGroup disabled={carsReorder} >
+        <IonReorderGroup disabled={carsReorder}>
           {carslist.map((car, i) => {
             return (
-              <IonItem key={`cars-list-${i}`} className="cars-list" lines="none">
+              <IonItem
+                key={`cars-list-${i}`}
+                className="cars-list"
+                lines="none"
+              >
                 <div className="cars-list-left">
                   <IonText className="carName">{car.car_name}</IonText>
                   <IonText className="repairs">Repairs: {car.repairs}</IonText>
                 </div>
                 <div className="cars-list-right">
                   <IonText className="repairs repairs-date">{car.date}</IonText>
-                  {
-                    carsReorder &&
-                  <div>
+                  {carsReorder && (
                     <div>
-                      <IonImg src="assets/alert.svg"></IonImg>
+                      <div>
+                        <IonImg src="assets/alert.svg"></IonImg>
+                      </div>
+                      <div>
+                        <IonImg src="assets/flag.svg"></IonImg>
+                      </div>
                     </div>
-                    <div>
-                      <IonImg src="assets/flag.svg"></IonImg>
-                    </div>
-                  </div>
-                  }
-                <IonImg
-                    className="add-repair"
-                    src="assets/add_repair.svg"
-                    onClick={() => navigateToRepaircar}
-                  ></IonImg>
+                  )}
+                  {carsReorder && (
+                    <IonImg
+                      className="add-repair"
+                      src="assets/add_repair.svg"
+                      onClick={() => navigateToRepaircar}
+                    ></IonImg>
+                  )}
                 </div>
                 <IonReorder slot="end">
-          <IonIcon icon={reorderFour} />
-        </IonReorder>
+                  <IonIcon icon={reorderFour} />
+                </IonReorder>
               </IonItem>
             );
           })}
-          </IonReorderGroup>
-        
+        </IonReorderGroup>
       </IonContent>
       <IonFooter class="cars-footer">
         <div className="footer-btns">
-          {carsReorder ? 
-          <>
-          <button className="btn-reorder" onClick={() => {setCarsReorder(false)}}>Reorder</button>
-          <button className="btn-addcar" onClick={() => navigateToAddcar}>Add Car</button>
-          </>
-          :
-          <>
-          <button className="btn-reorder" onClick={() => {setCarsReorder(true)}}>Cancel</button>
-          <button className="btn-addcar" onClick={() => {setCarsReorder(true)}}>Save</button>
-          </>
-          }
+          {carsReorder ? (
+            <>
+              <button
+                className="btn-reorder"
+                onClick={() => {
+                  setCarsReorder(false);
+                }}
+              >
+                Reorder
+              </button>
+              <button className="btn-addcar" onClick={() => navigateToAddcar}>
+                Add Car
+              </button>
+            </>
+          ) : (
+            <>
+              <button
+                className="btn-reorder"
+                onClick={() => {
+                  setCarsReorder(true);
+                }}
+              >
+                Cancel
+              </button>
+              <button
+                className="btn-addcar"
+                onClick={() => {
+                  setCarsReorder(true);
+                }}
+              >
+                Save
+              </button>
+            </>
+          )}
         </div>
       </IonFooter>
     </IonPage>
