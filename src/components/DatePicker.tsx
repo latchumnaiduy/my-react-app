@@ -12,8 +12,11 @@ import {
   import React, { useState } from "react";
   import "./index.css";
   import { format, parseISO } from 'date-fns';
+  interface IProps {
+    onChange: (e:any) => void
+  }
 
-  export const DatePicker: React.FC = () => {
+  export const DatePicker: React.FC<IProps> = ({onChange}) => {
 
     const formatDate = (value: string) => {
       return format(parseISO(value), 'MM/dd/yyyy');
@@ -38,6 +41,7 @@ import {
             presentation="date"
             onIonChange={(ev) => {
               setPopoverDate(formatDate(ev.detail.value!));
+              onChange(formatDate(ev.detail.value!))
               setShowPopover({ showPopover: false, event: undefined });
             }}
           />

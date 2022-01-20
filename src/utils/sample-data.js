@@ -1,30 +1,35 @@
 export const formItems = [
   {
     label: "CAR CHECK-IN DATE",
+    keyName: "CAR_CHECK_IN_DATE",
     inputType: "date",
     isRequired: false,
     validations: {},
   },
   {
     label: "CAR REPAIR DATE",
+    keyName: "CAR_REPAIR_DATE",
     inputType: "date",
     isRequired: false,
     validations: {},
   },
   {
     label: "CAR INITIAL",
+    keyName: "CAR_INITIAL",
     inputType: "text",
     isRequired: true,
     validations: {},
   },
   {
     label: "CAR NUMBER",
+    keyName: "CAR_NUMBER",
     inputType: "number",
     isRequired: true,
     validations: {},
   },
   {
     label: "CHECK UMLER",
+    keyName: "CAR_UMLER",
     inputType: "toggle",
     isRequired: false,
     secondary_label: "Yes",
@@ -32,6 +37,7 @@ export const formItems = [
   },
   {
     label: "CAR KIND",
+    keyName: "CAR_KIND",
     inputType: "select",
     isRequired: true,
     validations: {},
@@ -52,6 +58,7 @@ export const formItems = [
   },
   {
     label: "LOADED",
+    keyName: "LOADED",
     inputType: "toggle",
     secondary_label: "Empty",
     isRequired: false,
@@ -59,6 +66,7 @@ export const formItems = [
   },
   {
     label: "STATUS",
+    keyName: "STATUS",
     inputType: "checkbox",
     isRequired: false,
     validations: {},
@@ -83,6 +91,7 @@ export const formItems = [
   },
   {
     label: "OWNER",
+    keyName: "OWNER",
     inputType: "searchBar",
     isRequired: false,
     validations: {},
@@ -90,6 +99,7 @@ export const formItems = [
   },
   {
     label: "SECONDARY OWNER",
+    keyName: "SECONDARY_OWNER",
     inputType: "text",
     isRequired: false,
     validations: {},
@@ -97,6 +107,7 @@ export const formItems = [
   },
   {
     label: "BILLING TYPE",
+    keyName: "BILLING_TYPE",
     inputType: "select",
     isRequired: true,
     validations: {},
@@ -151,6 +162,7 @@ export const addRepairItems=[
   {
     label: "Validation Type",
     inputType: "select",
+    keyName: '',
     isRequired: true,
     validations: {},
     options: [
@@ -170,12 +182,14 @@ export const addRepairItems=[
   },{
     label: "User Rules",
     inputType: "toggle",
+    keyName: '',
     secondary_label: "Empty",
     isRequired: false,
     validations: {},
   },{
     label: "Pricing",
     inputType: "select",
+    keyName: '',
     isRequired: true,
     validations: {},
     options: [
@@ -196,6 +210,7 @@ export const addRepairItems=[
   {
     label: "RP",
     inputType: "select",
+    keyName: '',
     isRequired: true,
     validations: {},
     options: [
@@ -228,96 +243,112 @@ export const addRepairItems=[
   {
     label: "AJC",
     inputType: "text",
+    keyName: '',
     isRequired: true,
     validations: {},
   },
   {
     label: "LOC",
     inputType: "text",
+    keyName: '',
     isRequired: false,
     validations: {},
   },
   {
     label: "QTY",
     inputType: "text",
+    keyName: '',
     isRequired: true,
     validations: {},
   },
   {
     label: "CC",
     inputType: "text",
+    keyName: '',
     isRequired: true,
     validations: {},
   },
   {
     label: "ACP",
     inputType: "text",
+    keyName: '',
     isRequired: true,
     validations: {},
   },
   {
     label: "AQ",
     inputType: "text",
+    keyName: '',
     isRequired: false,
     validations: {},
   },
   {
     label: "AUQ",
     inputType: "text",
+    keyName: '',
     isRequired: false,
     validations: {},
   },
   {
     label: "WM",
     inputType: "text",
+    keyName: '',
     isRequired: true,
     validations: {},
   },
   {
     label: "DESCRIPTION",
     inputType: "text",
+    keyName: '',
     isRequired: true,
     validations: {},
   },
   {
     label: "RJC",
     inputType: "text",
+    keyName: '',
     isRequired: true,
     validations: {},
   },
   {
     label: "RCP",
     inputType: "text",
+    keyName: '',
     isRequired: true,
     validations: {},
   },
   {
     label: "RQ",
     inputType: "text",
+    keyName: '',
     isRequired: false,
     validations: {},
   },
   {
     label: "RUQ",
     inputType: "text",
+    keyName: '',
     isRequired: false,
     validations: {},
   },
   {
     label: "RESP",
     inputType: "text",
+    keyName: '',
     isRequired: true,
     validations: {},
   },
   {
     label: "CATEOGERY",
     inputType: "text",
+    keyName: '',
     isRequired: false,
     validations: {},
   },
   {
     label: "INSPECTION",
     inputType: "toggle",
+    keyName: '',
     secondary_label: "Empty",
     isRequired: false,
     validations: {},
@@ -325,6 +356,7 @@ export const addRepairItems=[
   {
     label: "HIDDEN",
     inputType: "toggle",
+    keyName: '',
     secondary_label: "Empty",
     isRequired: false,
     validations: {},

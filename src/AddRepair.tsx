@@ -57,6 +57,10 @@ const AddRepair: React.FC = () => {
     //   path: "/track1",
     // },
   ];
+  const onChange = (e:any) => {
+    console.log(e, 'changes');
+    
+  }
   const formItemsClone: formItemsType[] = [...addRepairItems];
   return (
     <IonPage>
@@ -77,7 +81,7 @@ const AddRepair: React.FC = () => {
                     className="ion-col-item"
                     key={`form-items-${i}`}
                   >
-                    <FormInputItems formItems={item}></FormInputItems>
+                    <FormInputItems formItems={item} onChange={onChange}></FormInputItems>
                   </IonCol>
                 );
               })}

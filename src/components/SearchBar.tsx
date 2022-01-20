@@ -7,14 +7,18 @@ import {
 } from "@ionic/react";
 import React, { useState } from "react";
 import "./index.css";
+interface IProps {
+  onChange: (e:any) => void
+}
 
-export const SearchBar: React.FC = () => {
+export const SearchBar: React.FC<IProps> = ({onChange}) => {
   const [ownerNames, setownerNames] = useState([
     "Owner 1",
     "Owner 2",
     "Owner 3",
   ]);
-  const [searchOwnerNames, setSearchOwnerNames] = useState<String[]>([]);
+  const [inputValue,setInputValue] = useState<string>();
+  const [searchOwnerNames, setSearchOwnerNames] = useState<string[]>([]);
   const [isItemAvailable, setIsItemAvailable] = useState(false);
   const getItems = (ev: any) => {
     // Reset items back to all of the items
@@ -46,7 +50,8 @@ export const SearchBar: React.FC = () => {
           type="text"
           className="searchbar-input"
           clear-input={true}
-          debounce={500}
+          debounce={2000}
+          value={inputValue}
           onIonChange={(e) => getItems(e.detail.value!)}
         ></IonInput>
       </IonItem>
@@ -59,7 +64,11 @@ export const SearchBar: React.FC = () => {
                 lines="none"
                 className="ion-item-btn"
                 key={`search-${i}`}
-                onClick={() => setIsItemAvailable(false)}
+                onClick={() => {
+                  setIsItemAvailable(false);
+                  onChange(item);
+                  setInputValue(item);
+                }}
               >
                 {item}
               </IonItem>

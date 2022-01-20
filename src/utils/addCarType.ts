@@ -1,5 +1,6 @@
 export interface formItemsType  {
     label:string;
+    keyName:string;
     inputType:string;
     isRequired:Boolean,
     validations: Object,

@@ -38,6 +38,7 @@ import CustomHeader from "./components/CustomHeader";
 import { formItems } from "./utils/sample-data.js";
 import { FormInputItems } from "./components/FormInputItems";
 import { formItemsType } from "./utils/addCarType";
+import { useState } from "react";
 
 const AddCar: React.FC = () => {
   const breadCrumbItems = [
@@ -57,6 +58,16 @@ const AddCar: React.FC = () => {
       path: "/track1",
     },
   ];
+  const [formValues, setFormValues] = useState<any>();
+  const onChange = (e:any) => {
+    let formValuesClone = {...formValues};
+    formValuesClone = {...formValuesClone, ...e}
+    setFormValues({...formValuesClone});
+    console.log(e, 'changes');
+  }
+  const onSaveCar = () => {
+    console.log(formValues, "formValues")
+  }
   const formItemsClone: formItemsType[] = [...formItems];
   return (
     <IonPage>
@@ -77,7 +88,7 @@ const AddCar: React.FC = () => {
                     className="ion-col-item"
                     key={`form-items-${i}`}
                   >
-                    <FormInputItems formItems={item}></FormInputItems>
+                    <FormInputItems formItems={item} onChange={onChange}></FormInputItems>
                   </IonCol>
                 );
               })}
@@ -91,7 +102,7 @@ const AddCar: React.FC = () => {
         </div>
         <div className="footer-btns">
           <button className="btn-save btn-cancel">Cancel</button>
-          <button className="btn-save">Save </button>
+          <button className="btn-save" onClick={() => onSaveCar()}>Save </button>
         </div>
       </IonFooter>
     </IonPage>
