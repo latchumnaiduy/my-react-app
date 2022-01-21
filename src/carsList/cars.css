@@ -80,3 +80,11 @@ color:#8A929D;
 .p-0 {
   --padding-start: 0 !important;
 }
+.active-car{
+  --background: rgba(0, 125, 186, 1);
+  --color: white !important;
+}
+.active-car .carName, .active-car .repairs {
+  --color: white !important;
+  color: white;
+}

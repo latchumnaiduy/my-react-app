@@ -75,6 +75,17 @@ const Cars: React.FC = () => {
   const [carslist, setCarsList] = useState([...carsList]);
   const [carsReorder, setCarsReorder] = useState(true);
   const [headerTitle, setHeaderTitle] = useState('Cars');
+
+  const onSelectCar = (car: any) => {
+    let carsListClone = [...carslist];
+    carsListClone.map((x) => (x.active = false));
+    const INDEX = carsListClone.findIndex((x) => x.car_name === car.car_name);
+    if (INDEX > -1) {
+      carsListClone[INDEX].active = true;
+    }
+    setCarsList(carsListClone)
+  };
+
   return (
     <IonPage>
       <IonHeader>
@@ -89,8 +100,9 @@ const Cars: React.FC = () => {
             return (
               <IonItem
                 key={`cars-list-${i}`}
-                className="cars-list"
+                className={`cars-list ${car?.active ? "active-car" : ""}`}
                 lines="none"
+                onClick={() => onSelectCar(car)}
               >
                 <div className="cars-list-left">
                   <IonText className="carName">{car.car_name}</IonText>

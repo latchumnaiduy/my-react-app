@@ -61,3 +61,9 @@
 .item-location-list{
   border: 1px solid;
 }
+.location-item {
+ border-bottom:  1px solid rgba(0, 0, 0, 0.54)
+}
+.location-footer::before {
+  background-image: none;
+}

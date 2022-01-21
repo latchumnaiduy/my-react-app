@@ -67,19 +67,20 @@ const Locations: React.FC = () => {
         <CustomHeader title="Locations"></CustomHeader>
       {/* </IonHeader> */}
       <IonContent fullscreen className="has-header">
-        <IonList lines="full">
+        <IonList lines="none">
           {locationsList.map((location, i) => (
             <IonItem
               key={`location-${i}`}
-              className={location?.active ? "active-location" : ""}
+              className={`location-item ${location?.active} ? "active-location" : ""`}
               onClick={() => onSelectLocation(location)}
+              lines="none"
             >
               <IonText class="locations" className="p-0">{location.name}</IonText>
             </IonItem>
           ))}
         </IonList>
       </IonContent>
-      <IonFooter class="cars-footer"></IonFooter>
+      <IonFooter class="cars-footer location-footer"></IonFooter>
     </IonPage>
   );
 };

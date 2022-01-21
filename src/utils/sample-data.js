@@ -129,16 +129,19 @@ export const carsList = [
     car_name: "ABCEF 3456",
     repairs: 10,
     date: "22/10/2021",
+    active:false
   },
   {
     car_name: "BCXF 1243",
     repairs: 0,
     date: "20/10/2021",
+    active:false
   },
   {
     car_name: "CDMS 6789",
     repairs: 0,
     date: "20/11/2021",
+    active:false
   },
 ];
 
