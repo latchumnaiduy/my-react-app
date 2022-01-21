@@ -43,12 +43,24 @@
 .my-custom-popover {
   --width: 80%;
 }
+.ion-item-toggle-btn{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: -12px;
+}
+.ion-item-toggle-btn .ion-cars-label, .ion-item-toggle-btn .ion-item-btn-label {
+  margin-top: 0;
+  /* margin-bottom: 0; */
+}
 .ion-item-btn {
   --border-width: 0;
   --padding-start: 0;
   --padding-end:0;
   --ripple-color: transparent;
+  --ion-safe-area-right: 0;
 }
+
 .ion-item-btn-label{
   --border-width: 0;
   --padding-start: 0;
@@ -231,6 +243,14 @@
 .searchbar-input{
   display: block !important;
   width: 100% !important;
+  height: 44px;
+}
+.clear-input{
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9;
 }
 .h-auto{
   height: auto !important;

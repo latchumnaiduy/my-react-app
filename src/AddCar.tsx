@@ -78,7 +78,7 @@ const AddCar: React.FC = () => {
         <Breadcrumbs breadCrumbItems={breadCrumbItems}></Breadcrumbs>
       </IonHeader>
       <IonContent fullscreen>
-        <IonGrid>
+        <IonGrid className="pb-0">
          <IonRow>
             {formItemsClone &&
               formItemsClone.map((item, i) => {

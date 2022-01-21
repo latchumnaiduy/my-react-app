@@ -66,7 +66,7 @@ export const FormInputItems: React.FC<IProps> = ({ formItems, onChange }) => {
       </IonSelect>
     </>
   ) : formItems.inputType === "toggle" ? (
-    <IonItem type="button" lines="none" className="ion-item-btn">
+    <IonItem type="button" lines="none" className="ion-item-btn ion-item-toggle-btn">
       <IonLabel className="ion-cars-label">
         {formItems?.label} {formItems?.isRequired && <span className="required">(Required)</span>}
       </IonLabel>

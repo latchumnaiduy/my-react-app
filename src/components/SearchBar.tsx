@@ -4,6 +4,7 @@ import {
   IonSearchbar,
   IonList,
   IonInput,
+  IonImg,
 } from "@ionic/react";
 import React, { useState } from "react";
 import "./index.css";
@@ -21,6 +22,8 @@ export const SearchBar: React.FC<IProps> = ({onChange}) => {
   const [searchOwnerNames, setSearchOwnerNames] = useState<string[]>([]);
   const [isItemAvailable, setIsItemAvailable] = useState(false);
   const getItems = (ev: any) => {
+    console.log(ev,'key');
+    
     // Reset items back to all of the items
     setSearchOwnerNames([]);
     let ownerNamesClone = [...ownerNames];
@@ -50,10 +53,15 @@ export const SearchBar: React.FC<IProps> = ({onChange}) => {
           type="text"
           className="searchbar-input"
           clear-input={true}
-          debounce={2000}
           value={inputValue}
-          onIonChange={(e) => getItems(e.detail.value!)}
+          onIonInput={(e) => getItems(e.detail.data!)}
+          onIonChange={(e) => {}}
         ></IonInput>
+        <IonImg className="clear-input" src="assets/clear-input.svg" onClick={() => {
+          setIsItemAvailable(false);
+          onChange('');
+          setInputValue('');
+        }} ></IonImg>
       </IonItem>
       {isItemAvailable && (
         <IonList lines="none" className="search-results">
