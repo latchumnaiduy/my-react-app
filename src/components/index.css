@@ -1,5 +1,5 @@
 .ion-datepicker-btn {
-  border: 1px solid #C7D4DD;
+  border: 1px solid #c7d4dd;
   height: 44px;
   position: relative;
   /* --padding-end: 0;
@@ -7,13 +7,13 @@
   margin-left: 3px;
   margin-right: 3px; */
 }
-.ion-datepicker-btn.has-focus{
-  border: 1px solid #007DBA;
+.ion-datepicker-btn.has-focus {
+  border: 1px solid #007dba;
 }
-.ion-custom-datepicker{
+.ion-custom-datepicker {
   --padding-end: 0;
-  --padding-start: 0; 
-  margin: 0;
+  --padding-start: 0;
+    margin: 0;
 }
 .ion-datepicker-inner-btn {
   margin-left: -10px;
@@ -37,41 +37,43 @@
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 35px;
   color: #000000;
+  margin-left: -17px;
 }
 .my-custom-popover {
   --width: 80%;
 }
-.ion-item-toggle-btn{
+.ion-item-toggle-btn {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: -12px;
 }
-.ion-item-toggle-btn .ion-cars-label, .ion-item-toggle-btn .ion-item-btn-label {
+.ion-item-toggle-btn .ion-cars-label,
+.ion-item-toggle-btn .ion-item-btn-label {
   margin-top: 0;
   /* margin-bottom: 0; */
 }
 .ion-item-btn {
   --border-width: 0;
   --padding-start: 0;
-  --padding-end:0;
+  --padding-end: 0;
   --ripple-color: transparent;
   --ion-safe-area-right: 0;
 }
 
-.ion-item-btn-label{
+.ion-item-btn-label {
   --border-width: 0;
   --padding-start: 0;
-  --padding-end:0;
+  --padding-end: 0;
   display: flex !important;
   align-items: center;
   width: 100%;
   justify-content: end;
   margin-right: 0;
 }
-.ml-8{
+.ml-8 {
   margin-left: 8px;
 }
 .ion-cars-label {
@@ -81,13 +83,12 @@
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 35px;
   letter-spacing: 0.14px;
   color: #57657a !important;
 }
 .ion-cars-label .required {
   text-transform: capitalize !important;
-
 }
 .add-car-statusCard {
   background: #ffffff;
@@ -112,10 +113,10 @@
   margin-left: 8px;
 }
 .add-car-checkbox {
-  --background-checked: #007DBA;
-  --border-color: #007DBA;
-  --border-color-checked:#66B1D5;
-  --border-radius:15px;
+  --background-checked: #007dba;
+  --border-color: #007dba;
+  --border-color-checked: #66b1d5;
+  --border-radius: 15px;
 }
 .ion-header {
   background-color: #267dba;
@@ -123,9 +124,9 @@
   height: 56px;
 }
 .ion-breadcrumb-header::after {
-  background-image:none;
+  background-image: none;
 }
-.ion-breadcrumb-header{
+.ion-breadcrumb-header {
   border-bottom: 1px solid rgba(0, 0, 0, 0.54);
 }
 .ion-header-toolbar {
@@ -134,7 +135,7 @@
   min-height: 56px;
   padding-left: 17px;
   display: flex;
-    align-items: center;
+  align-items: center;
 }
 .breadcrumbs {
   overflow: hidden;
@@ -148,14 +149,14 @@
   margin: 0 0.5em 0 2em;
 }
 .breadcrumbs li:first-child {
-  margin-left: 0;
+  margin-left: 10px;
 }
 .breadcrumbs li:first-child a::before {
   display: none;
 }
 
 .breadcrumbs a {
-  background-color: #007DBA;
+  background-color: #007dba;
   color: #fff;
   padding: 0.3em 1em;
   float: left;
@@ -227,39 +228,47 @@
 }
 
 .add-car-toggle {
-  --background:#CCE5F1;
-  --background-checked: #66B1D5;
-  --handle-background-checked: #66B1D5;
+  --background: #66b1d5;
+  --background-checked: #66b1d5;
+  --handle-background-checked: #007dba;
   --handle-height: 20px;
   --handle-width: 20px;
 }
-.ion-selectdropdown{width: 50px;
+.ion-selectdropdown {
+  width: 50px;
   height: 18px;
   opacity: 100;
 }
-.mb-10{
-  margin-bottom: 10px;
+.mb-10 {
+  margin-bottom: -5px;
 }
-.searchbar-input{
+.searchbar-input {
   display: block !important;
   width: 100% !important;
   height: 44px;
+  margin-left: 10px;
+  font-family: Robotomedium;
 }
-.clear-input{
+.clear-input {
   position: absolute;
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 9;
 }
-.h-auto{
+/* .h-auto {
   height: auto !important;
-}
+} */
 .search-results {
-  background: #FFFFFF;
-/* Light UI/Elevation/M */
-
-box-shadow: 0px 6px 6px rgba(29, 46, 64, 0.1), 0px 0px 6px rgba(29, 46, 64, 0.1);
-margin-top: 7px;
-padding: 10px;
+  background: #ffffff;
+  /* Light UI/Elevation/M */
+  box-shadow: 0px 6px 6px rgba(29, 46, 64, 0.1),
+    0px 0px 6px rgba(29, 46, 64, 0.1);
+  margin-top: 7px;
+  padding: 10px;
+}
+ion-select::part(icon) {
+  color: black;
+  opacity: 1 !important;
+  width: 30px;
 }

@@ -71,7 +71,7 @@ const Locations: React.FC = () => {
           {locationsList.map((location, i) => (
             <IonItem
               key={`location-${i}`}
-              className={`location-item ${location?.active} ? "active-location" : ""`}
+              className={`location-item ${location?.active ? "active-location" : ""}`}
               onClick={() => onSelectLocation(location)}
               lines="none"
             >

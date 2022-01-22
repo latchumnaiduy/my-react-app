@@ -13,6 +13,7 @@ import {
   IonToggle,
   IonImg
 } from "@ionic/react";
+
 interface IProps {
   formItems: formItemsType;
   onChange: (e:any) => void

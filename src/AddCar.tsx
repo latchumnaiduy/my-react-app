@@ -53,8 +53,8 @@ const AddCar: React.FC = () => {
       path: "/track1",
     },
     {
-      name: "Track3",
-      value: "Track",
+      name: "BMX 001",
+      value: "car",
       path: "/track1",
     },
   ];
