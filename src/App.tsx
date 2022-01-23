@@ -29,18 +29,15 @@ import Pin from './Login/Pin'
 import AddCar from './AddCar';
 import AddRepair from './AddRepair';
 
-
-
 setupIonicReact();
-
 
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
     {/* <AddRepair/> */}
-        <Cars/>
-        {/* <Locations/> */}
+        {/* <Cars/> */}
+        <Locations/>
         {/* <AddCar/> */}
         {/* <Route path="add-car" component={AddCar} exact={true}/> 
           <Route path="/Locations" component={Locations} exact={true}/>
