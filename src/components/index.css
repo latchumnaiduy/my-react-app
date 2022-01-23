@@ -1,5 +1,5 @@
 .ion-datepicker-btn {
-  border: 1px solid #C7D4DD;
+  border: 1px solid #c7d4dd;
   height: 44px;
   position: relative;
   caret-color:black;
@@ -9,7 +9,7 @@
   margin-right: 3px; */
 }
 .ion-datepicker-btn.has-focus{
-  border: 1px solid #007DBA;
+  border: 1px solid #007dba;
 }
 .ion-custom-datepicker{
   --padding-end: 0;
@@ -18,10 +18,11 @@
   position: relative;
 }
 .ion-datepicker-inner-btn {
-  margin-left: -10px;
+  margin-left: -17px;
   color: #000000;
   position: absolute;
   right: -10px;
+  line-height: 35px;
 }
 .ion-datepicker-inner-btn-icon {
   height: 24px;
@@ -82,7 +83,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 35px;
   letter-spacing: 0.14px;
   color: #57657a !important;
 }
@@ -114,9 +115,9 @@
 }
 .add-car-checkbox {
   --background:transparent;
-  --background-checked: #007DBA;
-  --border-color: #007DBA;
-  --border-color-checked:#66B1D5;
+  --background-checked: #007dba;
+  --border-color: #007dba;
+  --border-color-checked:#66b1d5;
   --border-radius:15px;
   margin: 0;
 }

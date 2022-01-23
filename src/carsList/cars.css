@@ -81,7 +81,11 @@ color:#8A929D;
 }
 .active-car{
   --background: rgba(0, 125, 186, 1);
+  background: rgba(0, 125, 186, 1);
   --color: white !important;
+  margin-top: -7px;
+  padding-top: 7px;
+  /* height: auto; */
 }
 .active-car .carName, .active-car .repairs {
   --color: white !important;

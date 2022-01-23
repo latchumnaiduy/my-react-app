@@ -17,6 +17,7 @@ export const SearchBar: React.FC<IProps> = ({onChange}) => {
     "Owner 1",
     "Owner 2",
     "Owner 3",
+    "ADMX-ARCHER DANIELS MIDLAND"
   ]);
   const [inputValue,setInputValue] = useState<string>();
   const [searchOwnerNames, setSearchOwnerNames] = useState<string[]>([]);
