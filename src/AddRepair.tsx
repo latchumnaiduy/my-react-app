@@ -13,7 +13,7 @@ import {
   IonList,
 } from "@ionic/react";
 import { Breadcrumbs } from "./components/BreadCrumbs";
-import "./addCar.css";
+import "./AddCar/addCar.css";
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
 /* Basic CSS for apps built with Ionic */

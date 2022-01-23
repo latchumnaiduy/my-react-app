@@ -12,7 +12,7 @@ import {
   IonButton,
   IonList,
 } from "@ionic/react";
-import { Breadcrumbs } from "./components/BreadCrumbs";
+import { Breadcrumbs } from "../components/BreadCrumbs";
 import "./addCar.css";
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
@@ -30,17 +30,19 @@ import "@ionic/react/css/flex-utils.css";
 import "@ionic/react/css/display.css";
 
 /* Theme variables */
-import "./theme/variables.css";
-import "./theme/Cars.css";
-import CustomHeader from "./components/CustomHeader";
+import "../theme/variables.css";
+import "../theme/Cars.css";
+import CustomHeader from "../components/CustomHeader";
 
-import { formItems } from "./utils/sample-data.js";
-import { FormInputItems } from "./components/FormInputItems";
-import { formItemsType } from "./utils/addCarType";
-import { useState } from "react";
+import { formItems } from "../utils/sample-data.js";
+import { FormInputItems } from "../components/FormInputItems";
+import { formItemsType } from "../utils/addCarType";
+import { useEffect, useState } from "react";
+import { setEditData } from "./dataTransform";
+import { useLocation } from "react-router";
 
 const AddCar: React.FC = () => {
-  const breadCrumbItems = [
+  const breadCrumbs = [
     {
       name: "Location",
       value: "QUEST1",
@@ -51,15 +53,41 @@ const AddCar: React.FC = () => {
       value: "Track",
       path: "/track1",
     },
-    {
-      name: "Track3",
-      value: "Track",
-      path: "/track1",
-    },
   ];
+  const newBreadCrumb =  {
+    name: "Track3",
+    value: "Track",
+    path: "/track1",
+  }
+  const [breadCrumbItems,setbreadCrumbItems] = useState(breadCrumbs);
   const [formValues, setFormValues] = useState<any>();
+  const [formItemsClone , setFormItemsClone] = useState<formItemsType[]>([...formItems]);
+  const location = useLocation()
+  const [isEditCar, setIsEditCar] = useState<boolean>(false)
+
+
+useEffect(() => {
+  const state_:any = location.state;
+  if(state_ && state_?.isFromDetails) {
+    setIsEditCar(true);
+    let breadCrumbItemsClone = [...breadCrumbItems];
+    breadCrumbItemsClone.push(newBreadCrumb);
+    setbreadCrumbItems(breadCrumbItemsClone);
+    const formItems_new = [...formItemsClone];
+   const editedData = setEditData(null,[...formItems_new]);
+   console.log(editedData, "editedData");
+  }
+},[location])
+
   const onChange = (e:any) => {
+    const keyNmae = typeof(e) === "object" ?  Object.keys(e)[0] : '';
     let formValuesClone = {...formValues};
+    let formItems = [...formItemsClone];
+    const INDEX = formItems.findIndex(x => x.keyName === keyNmae);
+    if (INDEX > -1) {
+      formItems[INDEX]['value'] = e[keyNmae];
+    }
+    setFormItemsClone(formItems);
     formValuesClone = {...formValuesClone, ...e}
     setFormValues({...formValuesClone});
     console.log(e, 'changes');
@@ -67,11 +95,10 @@ const AddCar: React.FC = () => {
   const onSaveCar = () => {
     console.log(formValues, "formValues")
   }
-  const formItemsClone: formItemsType[] = [...formItems];
   return (
     <IonPage>
       <IonHeader class="location-tool-bar">
-        <CustomHeader title="Add Car"></CustomHeader>
+        <CustomHeader title={`${isEditCar ? 'Edit' : 'Add'} Car`}></CustomHeader>
       </IonHeader>
       <IonHeader className="ion-breadcrumb-header">
         <Breadcrumbs breadCrumbItems={breadCrumbItems}></Breadcrumbs>
@@ -95,10 +122,12 @@ const AddCar: React.FC = () => {
         </IonGrid>
       </IonContent>
       <IonFooter className="ion-footer">
+        {!isEditCar && 
         <div className="footer-btns">
           <button className="btn-save" disabled>Save and Add Repairs</button>
           <button className="btn-save">Save and Add Next Car</button>
         </div>
+        }
         <div className="footer-btns">
           <button className="btn-save btn-cancel">Cancel</button>
           <button className="btn-save" onClick={() => onSaveCar()}>Save </button>

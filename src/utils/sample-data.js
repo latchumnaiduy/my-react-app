@@ -74,18 +74,22 @@ export const formItems = [
       {
         label: "As Awaiting Shop Space",
         id: 1,
+        isChecked:false
       },
       {
         label: "As Awaiting Owners Material",
-        id: 1,
+        id: 2,
+        isChecked:false
       },
       {
         label: "IP - In Paint",
-        id: 1,
+        id: 3,
+        isChecked:false
       },
       {
         label: "REP - Hold  For Repair",
-        id: 1,
+        id: 4,
+        isChecked:false
       },
     ],
   },

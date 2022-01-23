@@ -1,4 +1,4 @@
-.breadcrumbs {
+/* .breadcrumbs {
     overflow: hidden;
     list-style-type: none;
     width: 100%;
@@ -62,8 +62,8 @@
     font-size: 16px;
     line-height: 20px;
     /* identical to box height, or 125% */
-    color: #ffffff;
-  }
+    /* color: #ffffff;
+  } */
   .breadcrumb-title {
     font-family: Robotobold;
     font-style: normal;
@@ -79,4 +79,180 @@
   }
   .ion-breadcrumb-header{
     border-bottom: 1px solid rgba(0, 0, 0, 0.54);
+  } */
+
+  .cardetail-sub-header {
+    --background: #ffffff;
+    width: 100%;
+    height: 62px;
+    list-style: none;
   }
+  /* ----------------------1st breadcrum----------------------------------- */
+.cardetail-breadcrum-1stimage {
+  height: 46px;
+  width: 128.75628662109375px;
+  margin-left: -10px;
+  top: 0px;
+  border-radius: 0px;
+}
+.cardetail-location-breadcrum {
+  position: absolute;
+  width: 100%;
+  height: 16px;
+  left: 12px;
+  /* right: 23.21%; */
+  top: 8%;
+  /* bottom: 58.64%; */
+  font-family: Robotoregular;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height, or 133% */
+  letter-spacing: 0.14px;
+  color: #ffffff;
+}
+.cardetail-quest1-breadcrum {
+  position: absolute;
+  left: 12px;
+  /* right: 23.21%; */
+  top: 48%;
+  /* bottom: 10.86%; */
+  font-family: Robotobold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+/* -----------------------2nd breadcrum--------------------------------------- */
+.cardetail-breadcrum-2ndback-images {
+  height: 46px;
+  width: 130.75628662109375px;
+  margin-left: -8px;
+  top: 0.0430908203125px;
+  border-radius: 0px;
+}
+.cardetail-Track-breadcrum {
+  position: absolute;
+  /* left: 38.5%;
+  right: 25.19%; */
+  top: 8%;
+  bottom: 58.18%;
+  width: 100%;
+  height: 16px;
+  font-family: Robotoregular;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height, or 133% */
+  letter-spacing: 0.14px;
+  color: #ffffff;
+  padding-left: 20%;
+}
+.cardetail-Track1-bold-breadcrum {
+  position: absolute;
+  width: 100%;
+  /* left: 38.5%;
+  right: 17.56%; */
+  top: 48%;
+  bottom: 16.36%;
+  font-family: Robotobold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  padding-left: 20%;
+}
+/* ------------------------------3rd breadcrum-------------------------------------- */
+.cardetail-breadcrum-3rd-back-images {
+  height: 48px;
+  width: 129.75628662109375px;
+  margin-left: -8px;
+  margin-top: 0px;
+  border-radius: 0px;
+  margin-right: -6px;
+}
+
+.cardetail-Cars-breadcrum {
+  position: absolute;
+  width: 100%;
+  /* left: 70.01%;
+  right: 26.61%; */
+  top: 8%;
+  bottom: 58.73%;
+  font-family: Robotoregular;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.14px;
+  color: #ffffff;
+  padding-left: 20%;
+}
+
+.cardetail-carnumber-breadcrum {
+  position: absolute;
+  width: 100%;
+  /* left: 70.01%;
+  right: 18.27%; */
+  top: 48%;
+  bottom: 10.95%;
+  font-family: Robotobold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height, or 125% */
+  color: #ffffff;
+  padding-left: 20%;
+}
+
+.cardetail-all-backbreadrum-images {
+  /* top:-6px; */
+  background-color: rgba(0, 125, 186, 1);
+  left: 0px;
+  max-width: 35%;
+  min-width: 32%;
+  height: 100%;
+  /* right: -6px; */
+}
+
+.first-breadcrum {
+  clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
+}
+
+.next-breadcrum {
+  margin-left: -2%;
+  clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%, 15% 50%);
+}
+
+.breadcrum-row {
+  height: 46px;
+  width: 100%;
+}
+
+.breadcrum-grid {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.cardetail-viewrepair-btn {
+  height: 44px;
+  background-color: #007dba;
+  color: white;
+  text-transform: capitalize;
+  width: 50%;
+  margin-left: 20px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  font-family: Robotobold;
+  --background: #007dba;
+  --color: #fff;
+  margin-top: -20px;
+}

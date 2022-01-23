@@ -13,11 +13,12 @@ import {
   import "./index.css";
   import { format, parseISO } from 'date-fns';
   interface IProps {
-    onChange: (e:any) => void
+    onChange: (e:any) => void,
+    value:string
   }
 
-  export const DatePicker: React.FC<IProps> = ({onChange}) => {
-
+  export const DatePicker: React.FC<IProps> = ({value,onChange}) => {
+   const new_date = value ? '2021-06-04T14:23:00-04:00' : '';
     const formatDate = (value: string) => {
       return format(parseISO(value), 'MM/dd/yyyy');
     };
@@ -39,6 +40,7 @@ import {
         >
           <IonDatetime
             presentation="date"
+            // value={new_date}
             onIonChange={(ev) => {
               setPopoverDate(formatDate(ev.detail.value!));
               onChange(formatDate(ev.detail.value!))

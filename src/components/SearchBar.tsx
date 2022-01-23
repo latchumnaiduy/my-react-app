@@ -9,17 +9,18 @@ import {
 import React, { useState } from "react";
 import "./index.css";
 interface IProps {
-  onChange: (e:any) => void
+  onChange: (e:any) => void,
+  value:string
 }
 
-export const SearchBar: React.FC<IProps> = ({onChange}) => {
+export const SearchBar: React.FC<IProps> = ({value,onChange}) => {
   const [ownerNames, setownerNames] = useState([
     "Owner 1",
     "Owner 2",
     "Owner 3",
     "ADMX-ARCHER DANIELS MIDLAND"
   ]);
-  const [inputValue,setInputValue] = useState<string>();
+  const [inputValue,setInputValue] = useState<string>(value);
   const [searchOwnerNames, setSearchOwnerNames] = useState<string[]>([]);
   const [isItemAvailable, setIsItemAvailable] = useState(false);
   const getItems = (ev: any) => {

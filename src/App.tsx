@@ -26,8 +26,9 @@ import Cars from './carsList/Cars';
 
 import Auth from './Authentication/Auth';
 import Pin from './Login/Pin'
-import AddCar from './AddCar';
+import AddCar from './AddCar/AddCar';
 import AddRepair from './AddRepair';
+import Cardetails from './CarDetails/Cardetails';
 
 
 
@@ -38,17 +39,18 @@ const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
-    <Locations/>
+    {/* <Cardetails/> */}
         {/* <Cars/> */}
         {/* <Locations/> */}
         {/* <AddCar/> */}
-        <Route path="add-car" component={AddCar} exact={true}/> 
+        <Route path="/detail-car" component={Cardetails} exact={true}/> 
+        <Route path="/add-car" component={AddCar} exact={true}/> 
           <Route path="/Locations" component={Locations} exact={true}/>
         <Route path="/Cars" component={Cars} exact={true}/>
        {/* <Route path="/Cars" component={Cars} exact={true}/> */}
        <Route path="/add-repair" component={AddRepair} exact={true}/>
 
-        {/* <Redirect path="" to="/add-car"  /> */}
+        <Redirect path="" to="/add-car"  />
       </IonRouterOutlet> 
     </IonReactRouter>
   </IonApp>

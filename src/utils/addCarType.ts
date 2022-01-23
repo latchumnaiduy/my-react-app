@@ -5,9 +5,11 @@ export interface formItemsType  {
     isRequired:Boolean,
     validations: Object,
     options?: FormInputOptions[],
-    secondary_label?:string
+    secondary_label?:string,
+    [key:string]:any
 }
 type FormInputOptions ={
     label: string;
-    id:number
+    id:number,
+    isChecked?:boolean
 }

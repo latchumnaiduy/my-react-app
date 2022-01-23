@@ -54,7 +54,7 @@ const Locations: React.FC = () => {
     let locationsListClone = [...locationsList];
     locationsListClone.map((x) => (x.active = false));
     setLocationsList(locationsListClone)
-  },[])
+  })
   
   const onSelectLocation = (location: any) => {
     let locationsListClone = [...locationsList];
@@ -69,9 +69,9 @@ const Locations: React.FC = () => {
 
   return (
     <IonPage>
-      {/* <IonHeader class="location-tool-bar"> */}
+      <IonHeader class="location-tool-bar">
         <CustomHeader title="Locations" ></CustomHeader>
-      {/* </IonHeader> */}
+      </IonHeader>
       <IonContent fullscreen className="has-header">
         <IonList lines="none">
           {locationsList.map((location, i) => (
