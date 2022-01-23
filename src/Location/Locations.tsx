@@ -54,7 +54,7 @@ const Locations: React.FC = () => {
     let locationsListClone = [...locationsList];
     locationsListClone.map((x) => (x.active = false));
     setLocationsList(locationsListClone)
-  })
+  },[])
   
   const onSelectLocation = (location: any) => {
     let locationsListClone = [...locationsList];
