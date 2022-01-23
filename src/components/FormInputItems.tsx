@@ -66,7 +66,7 @@ export const FormInputItems: React.FC<IProps> = ({ formItems, onChange }) => {
       </IonSelect>
     </>
   ) : formItems.inputType === "toggle" ? (
-    <IonItem type="button" lines="none" className="ion-item-btn ion-item-toggle-btn">
+    <IonLabel className="ion-item-btn ion-item-toggle-btn">
       <IonLabel className="ion-cars-label">
         {formItems?.label} {formItems?.isRequired && <span className="required">(Required)</span>}
       </IonLabel>
@@ -74,7 +74,7 @@ export const FormInputItems: React.FC<IProps> = ({ formItems, onChange }) => {
       <IonToggle className="add-car-toggle" onIonChange={(e) => onChange({[formItems.keyName]:e?.detail?.checked!})}/>
       <IonLabel className="ml-8">{formItems?.secondary_label}</IonLabel>
       </IonLabel>
-    </IonItem>
+    </IonLabel>
   ) : formItems.inputType === "checkbox" ? (
     <>
       <IonLabel className="ion-cars-label">{formItems?.label}</IonLabel>
@@ -86,7 +86,7 @@ export const FormInputItems: React.FC<IProps> = ({ formItems, onChange }) => {
               type="button"
               lines="none"
               key={`${formItems?.label}-${i}`}
-              className="ion-item-btn mb-10"
+              className="ion-item-btn"
             >
               <IonCheckbox className="add-car-checkbox" onIonChange={(e) => onChange({[formItems.keyName]:e?.detail?.checked!})}/>
               <IonLabel className="add-car-statusCard-label">{item?.label}</IonLabel>

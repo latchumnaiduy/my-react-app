@@ -1,6 +1,5 @@
 import React from "react";
-import { IonBreadcrumb, IonBreadcrumbs } from "@ionic/react";
-import './index.css';
+import './breadcrumbs.css';
 interface ChildProps {
   breadCrumbItems: breadCrumbItem[];
 }

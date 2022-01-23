@@ -21,7 +21,7 @@ import "./global.css";
 
 /* Theme variables */
 import './theme/variables.css';
-import Locations from './Locations';
+import Locations from './Location/Locations';
 import Cars from './carsList/Cars';
 
 import Auth from './Authentication/Auth';
@@ -38,7 +38,7 @@ const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
-    <AddCar/>
+    <Locations/>
         {/* <Cars/> */}
         {/* <Locations/> */}
         {/* <AddCar/> */}

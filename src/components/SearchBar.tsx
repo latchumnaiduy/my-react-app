@@ -47,14 +47,14 @@ export const SearchBar: React.FC<IProps> = ({onChange}) => {
       {/* <IonList lines="none"> */}
       <IonItem
         lines="none"
-        className="ion-item-btn ion-datepicker-btn ion-custom-datepicker"
+        className="ion-item-btn  ion-custom-datepicker"
       >
         <IonInput
-          type="text"
-          className="searchbar-input"
-          clear-input={true}
+          type="search"
+          color="dark"
+          className=" ion-datepicker-btn"
           value={inputValue}
-          onIonInput={(e) => getItems(e.detail.data!)}
+          onKeyPress={(e:any) => getItems(e?.target?.value)}
           onIonChange={(e) => {}}
         ></IonInput>
         <IonImg className="clear-input" src="assets/clear-input.svg" onClick={() => {

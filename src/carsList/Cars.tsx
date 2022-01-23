@@ -88,9 +88,9 @@ const Cars: React.FC = () => {
 
   return (
     <IonPage>
-      <IonHeader>
+      {/* <IonHeader> */}
         <CustomHeader title={headerTitle}></CustomHeader>
-      </IonHeader>
+      {/* </IonHeader> */}
       <IonHeader className="ion-breadcrumb-header">
         <Breadcrumbs breadCrumbItems={breadCrumbItems}></Breadcrumbs>
       </IonHeader>
@@ -110,8 +110,7 @@ const Cars: React.FC = () => {
                 </div>
                 <div className="cars-list-right">
                   <IonText className="repairs repairs-date">{car.date}</IonText>
-                  {carsReorder && (
-                    <div>
+                    <div className={`add-repair ${carsReorder ? '': 'invisible'}`}>
                       <div>
                         <IonImg src="assets/alert.svg"></IonImg>
                       </div>
@@ -119,17 +118,14 @@ const Cars: React.FC = () => {
                         <IonImg src="assets/flag.svg"></IonImg>
                       </div>
                     </div>
-                  )}
-                  {carsReorder && (
                     <IonImg
-                      className="add-repair"
+                      className={`add-repair ${carsReorder ? '': 'invisible'}`}
                       src="assets/add_repair.svg"
                       onClick={() => navigateToRepaircar}
                     ></IonImg>
-                  )}
                 </div>
-                <IonReorder slot="end">
-                  <IonIcon icon={reorderFour} />
+                <IonReorder slot="end" className="reorder-container">
+                <IonImg src="assets/reorder.svg"></IonImg>
                 </IonReorder>
               </IonItem>
             );

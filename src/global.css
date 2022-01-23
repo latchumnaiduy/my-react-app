@@ -16,7 +16,6 @@
 
 /* Theme variables */
 @import "./theme/variables.css";
-@import "./theme/Locations.css";
 @import "./theme/Cars.css";
 *{
     font-family: "Robotobold";

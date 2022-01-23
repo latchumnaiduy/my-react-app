@@ -2,6 +2,7 @@
   border: 1px solid #C7D4DD;
   height: 44px;
   position: relative;
+  caret-color:black;
   /* --padding-end: 0;
   --padding-start: 0;
   margin-left: 3px;
@@ -14,6 +15,7 @@
   --padding-end: 0;
   --padding-start: 0; 
   margin: 0;
+  position: relative;
 }
 .ion-datepicker-inner-btn {
   margin-left: -10px;
@@ -67,7 +69,6 @@
   --padding-end:0;
   display: flex !important;
   align-items: center;
-  width: 100%;
   justify-content: end;
   margin-right: 0;
 }
@@ -112,22 +113,19 @@
   margin-left: 8px;
 }
 .add-car-checkbox {
+  --background:transparent;
   --background-checked: #007DBA;
   --border-color: #007DBA;
   --border-color-checked:#66B1D5;
   --border-radius:15px;
+  margin: 0;
 }
 .ion-header {
   background-color: #267dba;
   color: #fff;
   height: 56px;
 }
-.ion-breadcrumb-header::after {
-  background-image:none;
-}
-.ion-breadcrumb-header{
-  border-bottom: 1px solid rgba(0, 0, 0, 0.54);
-}
+
 .ion-header-toolbar {
   --background: #267dba;
   --color: #fff;
@@ -136,80 +134,7 @@
   display: flex;
     align-items: center;
 }
-.breadcrumbs {
-  overflow: hidden;
-  list-style-type: none;
-  width: 100%;
-  padding-left: 5px;
-  margin: 5px 0;
-}
-.breadcrumbs li {
-  float: left;
-  margin: 0 0.5em 0 2em;
-}
-.breadcrumbs li:first-child {
-  margin-left: 0;
-}
-.breadcrumbs li:first-child a::before {
-  display: none;
-}
 
-.breadcrumbs a {
-  background-color: #007DBA;
-  color: #fff;
-  padding: 0.3em 1em;
-  float: left;
-  text-decoration: none;
-  position: relative;
-}
-.breadcrumbs a p {
-  margin: 0;
-}
-
-.breadcrumbs a::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  margin-top: -2em;
-  border-width: 2em 0px 2em 2em;
-  border-style: solid;
-  border-color: #267dba #267dba #267dba transparent;
-  left: -1.9em;
-}
-
-.breadcrumbs a::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  margin-top: -2em;
-  border-top: 2em solid transparent;
-  border-bottom: 2em solid transparent;
-  border-left: 2.5em solid #267dba;
-  right: -1.9em;
-}
-
-.breadcrumbs a:hover::after {
-  border-left-color: #267dba;
-}
-.breadcrumb-text {
-  font-family: Robotomedium;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 20px;
-  /* identical to box height, or 125% */
-  color: #ffffff;
-}
-.breadcrumb-title {
-  font-family: Robotobold;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 16px;
-  /* identical to box height, or 133% */
-  letter-spacing: 0.14px;
-  color: #ffffff;
-}
 .cars-title {
   margin-left: 35px;
   font-family: Robotoregular;
@@ -227,6 +152,7 @@
 }
 
 .add-car-toggle {
+  --handle-background:#CCE5F1;
   --background:#CCE5F1;
   --background-checked: #66B1D5;
   --handle-background-checked: #66B1D5;
@@ -240,11 +166,11 @@
 .mb-10{
   margin-bottom: 10px;
 }
-.searchbar-input{
+/* .searchbar-input{
   display: block !important;
   width: 100% !important;
   height: 44px;
-}
+} */
 .clear-input{
   position: absolute;
   right: 10px;

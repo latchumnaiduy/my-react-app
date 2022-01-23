@@ -39,17 +39,23 @@ import "@ionic/react/css/text-alignment.css";
 import "@ionic/react/css/text-transformation.css";
 import "@ionic/react/css/flex-utils.css";
 import "@ionic/react/css/display.css";
-import CustomHeader from "./components/CustomHeader";
+import CustomHeader from "../components/CustomHeader";
 /* Theme variables */
 // import "./theme/variables.css";
-import "./theme/Locations.css";
+import "./Locations.css";
 // import "./theme/Cars.css";
-import { useState } from "react";
-import { locations } from "./utils/sample-data";
+import { useEffect, useState } from "react";
+import { locations } from "../utils/sample-data";
 const Locations: React.FC = () => {
   const history = useHistory();
   const [locationsList, setLocationsList] = useState([...locations]);
 
+  useEffect(() => {
+    let locationsListClone = [...locationsList];
+    locationsListClone.map((x) => (x.active = false));
+    setLocationsList(locationsListClone)
+  },[])
+  
   const onSelectLocation = (location: any) => {
     let locationsListClone = [...locationsList];
     locationsListClone.map((x) => (x.active = false));
@@ -64,14 +70,14 @@ const Locations: React.FC = () => {
   return (
     <IonPage>
       {/* <IonHeader class="location-tool-bar"> */}
-        <CustomHeader title="Locations"></CustomHeader>
+        <CustomHeader title="Locations" ></CustomHeader>
       {/* </IonHeader> */}
       <IonContent fullscreen className="has-header">
         <IonList lines="none">
           {locationsList.map((location, i) => (
             <IonItem
               key={`location-${i}`}
-              className={`location-item ${location?.active} ? "active-location" : ""`}
+              className={`location-item ${location?.active ? "active-location" : ""}`}
               onClick={() => onSelectLocation(location)}
               lines="none"
             >

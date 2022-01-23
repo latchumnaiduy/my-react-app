@@ -38,7 +38,6 @@ color:#8A929D;
     margin-bottom: 7px;
     height: 60px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.54);
-    left: -5px;
 }
 .add-repair {
   height: 32px;
@@ -87,4 +86,14 @@ color:#8A929D;
 .active-car .carName, .active-car .repairs {
   --color: white !important;
   color: white;
+}
+.invisible {
+  visibility: hidden;
+}
+.reorder-container {
+  position: absolute;
+  z-index: 99;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
 }
