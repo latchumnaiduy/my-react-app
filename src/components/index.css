@@ -1,12 +1,16 @@
-.ion-datepicker-btn {
-  border: 1px solid #c7d4dd;
-  height: 44px;
+.ion-datepicker-btn, .ant-picker, .ant-select-selector  {
+  border: 1px solid #c7d4dd !important;
+  height: 44px !important;
   position: relative;
   caret-color:black;
+  width: 100% !important;
   /* --padding-end: 0;
   --padding-start: 0;
   margin-left: 3px;
   margin-right: 3px; */
+}
+.ant-select{
+  width: 100%;
 }
 .ion-datepicker-btn.has-focus{
   border: 1px solid #007dba;
@@ -86,6 +90,7 @@
   line-height: 35px;
   letter-spacing: 0.14px;
   color: #57657a !important;
+  display: block;
 }
 .ion-cars-label .required {
   text-transform: capitalize !important;
@@ -121,6 +126,54 @@
   --border-radius:15px;
   margin: 0;
 }
+/* checkbox customization */
+
+.ant-radio-inner, .ant-radio-checked .ant-radio-inner{
+  border: 2px solid #007dba;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+/* .ant-radio-checked .ant-radio-inner{
+  background-color: #007dba;
+  border-color: #007dba;
+  position: absolute;
+  display: table;
+  border: 2px solid #fff;
+  border-top: 0;
+  border-left: 0;
+  color: white;
+  content: '\2713';
+} */
+.add-car-checkbox .ant-radio-wrapper{
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 19px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+  /* Light UI/Primary */
+  color: #000000 !important;
+  margin-left: 8px;
+}
+/* .ant-radio-inner::after {
+  height: 20px;
+  width: 20px;
+} */
+/* .ant-radio-inner::after{
+  width: 6.714286px;
+  height: 13.142857px;
+}
+.ant-radio-checked::after{
+  border: none;
+} */
+
+/* checkbox customization ends */
+
+
 .ion-header {
   background-color: #267dba;
   color: #fff;
@@ -151,14 +204,32 @@
   height: 30px;
   /* margin-left: 12px; */
 }
-
+.ant-form-item-label label, .ant-form-item-label .ion-item-toggle-btn {
+  width: 100%;
+}
 .add-car-toggle {
   --handle-background:#CCE5F1;
-  --background:#CCE5F1;
+  background:#CCE5F1;
   --background-checked: #66B1D5;
   --handle-background-checked: #66B1D5;
-  --handle-height: 20px;
-  --handle-width: 20px;
+  height: 20px;
+  width: 20px;
+}
+.add-car-toggle.ant-switch-checked{
+  background: #66B1D5;
+}
+.add-car-toggle .ant-switch-handle{
+  height: 22px;
+  width: 22px;
+  top: -1px;
+}
+.add-car-toggle{
+}
+.add-car-toggle .ant-switch-handle::before {
+  background-color:#CCE5F1;
+}
+.add-car-toggle.ant-switch-checked .ant-switch-handle::before {
+  background-color:#66B1D5;
 }
 .ion-selectdropdown{width: 50px;
   height: 18px;

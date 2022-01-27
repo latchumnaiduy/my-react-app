@@ -40,6 +40,7 @@ import { formItemsType } from "../utils/addCarType";
 import { useEffect, useState } from "react";
 import { setEditData } from "./dataTransform";
 import { useLocation } from "react-router";
+import { Col, Form, Row } from "antd";
 
 const AddCar: React.FC = () => {
   const breadCrumbs = [
@@ -64,7 +65,7 @@ const AddCar: React.FC = () => {
   const [formItemsClone , setFormItemsClone] = useState<formItemsType[]>([...formItems]);
   const location = useLocation()
   const [isEditCar, setIsEditCar] = useState<boolean>(false)
-
+  const [addCarForm] = Form.useForm()
 
 useEffect(() => {
   const state_:any = location.state;
@@ -93,8 +94,16 @@ useEffect(() => {
     console.log(e, 'changes');
   }
   const onSaveCar = () => {
-    console.log(formValues, "formValues")
+    // console.log(formValues, "formValues")
+    addCarForm.submit();
   }
+  const onFinish = (values: any) => {
+    console.log(values,"form values");
+    
+  }
+
+  const onFinishFailed = () => {}
+
   return (
     <IonPage>
       <IonHeader class="location-tool-bar">
@@ -105,20 +114,32 @@ useEffect(() => {
       </IonHeader>
       <IonContent fullscreen>
         <IonGrid className="pb-0">
-         <IonRow>
+        
+         <Form
+          name="addCarForm"
+          form={addCarForm}
+          labelCol={{ span: 24 }}
+          wrapperCol={{ span: 24 }}
+          layout="vertical"
+          onFinish={onFinish}
+          onFinishFailed={onFinishFailed}
+          autoComplete="off"
+        >
+           <Row gutter={[16, 5]} >
             {formItemsClone &&
               formItemsClone.map((item, i) => {
                 return (
-                  <IonCol
-                    size="12"
+                  <Col
+                    span={24}
                     className="ion-col-item"
                     key={`form-items-${i}`}
                   >
                     <FormInputItems formItems={item} onChange={onChange}></FormInputItems>
-                  </IonCol>
+                  </Col>
                 );
               })}
-          </IonRow>
+          </Row>
+              </Form>
         </IonGrid>
       </IonContent>
       <IonFooter className="ion-footer">

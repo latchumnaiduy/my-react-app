@@ -1,7 +1,8 @@
 import React from "react";
-import { DatePicker } from "./DatePicker";
+// import { DatePicker } from "./DatePicker";
 import {SearchBar} from "./SearchBar";
 import { formItemsType } from "../utils/addCarType";
+import { Form, Input, DatePicker, Select, Switch, Checkbox, Radio } from 'antd';
 import {
   IonCard,
   IonCheckbox,
@@ -19,87 +20,86 @@ interface IProps {
 }
 
 export const FormInputItems: React.FC<IProps> = ({ formItems, onChange }) => {
-
-
+  const { Option } = Select;
+  const CheckboxGroup = Checkbox.Group;
 
   return formItems.inputType === "date" ? (
-    <>
-      <IonLabel className="ion-cars-label">
-        {formItems?.label} {formItems?.isRequired && <span className="required">(Required)</span>}
-      </IonLabel>
-      <DatePicker value={formItems?.value} onChange={(e) => onChange({[formItems.keyName] : e})}></DatePicker>
-    </>
+    <Form.Item
+    label={<IonLabel className="ion-cars-label">
+    {formItems?.label} {formItems?.isRequired && <span className="required">(Required)</span>}
+  </IonLabel>}
+    name={formItems.keyName}
+    className={`${formItems.keyName}`}
+    rules={[{ required: true, message: 'Please input the field!' }]}>
+      
+      <DatePicker suffixIcon={<IonImg className="ion-datepicker-inner-btn-icon" src="assets/calendar.svg"></IonImg>}></DatePicker>
+    </Form.Item>
   ) : formItems.inputType === "number" || formItems.inputType === "text" ? (
-    <>
-      <IonLabel className="ion-cars-label">
-        {formItems?.label} {formItems?.isRequired && <span className="required">(Required)</span>}
-      </IonLabel>
-      <IonInput
+   <Form.Item
+    label={<IonLabel className="ion-cars-label">
+    {formItems?.label} {formItems?.isRequired && <span className="required">(Required)</span>}
+  </IonLabel>}
+    name={formItems.keyName}
+    rules={[{ required: true, message: 'Please input the field!' }]}
+  >
+      <Input
         type={formItems.inputType}
-        value={formItems?.value}
-        onIonChange={(e) => onChange({[formItems.keyName] : e?.detail?.value!})}
         className="ion-datepicker-btn"
-      ></IonInput>
-    </>
-  ): formItems.inputType === "searchBar" ? (
-    <>
-      <IonLabel className="ion-cars-label">
-        {formItems?.label} {formItems?.isRequired && <span className="required">(Required)</span>}
-      </IonLabel>
-      <SearchBar value={formItems?.value} onChange={(e) => onChange({[formItems.keyName]:e})}/>
-    </>
-  ) : formItems.inputType === "select" ? (
-    <>
-      <IonLabel className="ion-cars-label">
-        {formItems?.label} {formItems?.isRequired && <span className="required">(Required)</span>}
-      </IonLabel>
-      <IonSelect
-        okText="Select"
-        cancelText="Cancel"
-        className="ion-datepicker-btn"
-        value={formItems?.value}
-        onIonChange={(e) => onChange({[formItems.keyName]:e?.detail?.value!})}
+      ></Input>
+    </Form.Item>
+  ):
+   (formItems.inputType === "select" || formItems.inputType === "searchBar") ? (
+    <Form.Item
+    label={ <IonLabel className="ion-cars-label">
+    {formItems?.label} {formItems?.isRequired && <span className="required">(Required)</span>}
+  </IonLabel>}
+    name={formItems.keyName}
+    rules={[{ required: true, message: 'Please input the field!' }]}>
+      <Select
+        showSearch={formItems.inputType === "searchBar" ? true : false}
+        optionFilterProp="children"
+        filterOption={(input, option:any) =>
+          option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
+        }
+        filterSort={(optionA, optionB) =>
+          optionA.children.toLowerCase().localeCompare(optionB.children.toLowerCase())
+        }
       >
         {formItems?.options &&
           formItems?.options.map((item, i) => {
             return (
-              <IonSelectOption value={item?.id} key={`${item?.label}-${i}`}>
+              <Option value={item?.id} key={`${item?.label}-${i}`}>
                 {item?.label}
-              </IonSelectOption>
+              </Option>
             );
           })}
-      </IonSelect>
-    </>
+      </Select>
+    </Form.Item>
   ) : formItems.inputType === "toggle" ? (
+    <Form.Item 
+    label=""
+    name={formItems.keyName}>
     <IonLabel className="ion-item-btn ion-item-toggle-btn">
       <IonLabel className="ion-cars-label">
-        {formItems?.label} {formItems?.isRequired && <span className="required">(Required)</span>}
-      </IonLabel>
-      <IonLabel className="ion-item-btn-label">
-      <IonToggle className="add-car-toggle" value={formItems?.secondary_label} checked={formItems?.secondary_label == formItems?.value} onIonChange={(e) => onChange({[formItems.keyName]:e?.detail?.value!})}/>
-      <IonLabel className="ml-8">{formItems?.secondary_label}</IonLabel>
-      </IonLabel>
+      {formItems?.label} {formItems?.isRequired && <span className="required">(Required)</span>}
     </IonLabel>
+        <IonLabel className="ion-item-btn-label">
+        <Switch className="add-car-toggle"  checked={formItems?.value}/>
+        <IonLabel className="ml-8">{formItems?.secondary_label}</IonLabel>
+        </IonLabel>
+      </IonLabel>
+    </Form.Item>
   ) : formItems.inputType === "checkbox" ? (
-    <>
-      <IonLabel className="ion-cars-label">{formItems?.label}</IonLabel>
+    <Form.Item
+    label={<IonLabel className="ion-cars-label">{formItems?.label}</IonLabel>}
+    name={formItems.keyName}
+    rules={[{ required: true, message: 'Please input the field!' }]}>
       <IonCard className="add-car-statusCard">
-      {formItems?.options &&
-        formItems.options.map((item, i) => {
-          return (
-            <IonItem
-              type="button"
-              lines="none"
-              key={`${formItems?.label}-${i}`}
-              className="ion-item-btn"
+          <Radio.Group className="add-car-checkbox" options={formItems?.checkboxOptions}
             >
-              <IonCheckbox className="add-car-checkbox" value={item?.label} checked={item?.label == formItems?.value } onIonChange={(e) => onChange({[formItems.keyName]:e?.detail?.value!})}/>
-              <IonLabel className="add-car-statusCard-label">{item?.label}</IonLabel>
-            </IonItem>
-          )
-        })}
+            </Radio.Group>
         </IonCard>
-    </>
+    </Form.Item>
   ) : (
     <></>
   );

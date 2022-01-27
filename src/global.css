@@ -17,6 +17,9 @@
 /* Theme variables */
 @import "./theme/variables.css";
 @import "./theme/Cars.css";
+
+@import 'antd/dist/antd.css';
+
 *{
     font-family: "Robotobold";
 }

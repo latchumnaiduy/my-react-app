@@ -70,26 +70,22 @@ export const formItems = [
     inputType: "checkbox",
     isRequired: false,
     validations: {},
-    options: [
+    checkboxOptions: [
       {
         label: "As Awaiting Shop Space",
-        id: 1,
-        isChecked:false
+        value: "As Awaiting Shop Space",
       },
       {
         label: "As Awaiting Owners Material",
-        id: 2,
-        isChecked:false
+        value: "As Awaiting Owners Material",
       },
       {
         label: "IP - In Paint",
-        id: 3,
-        isChecked:false
+        value: "IP - In Paint",
       },
       {
         label: "REP - Hold  For Repair",
-        id: 4,
-        isChecked:false
+        value: "REP - Hold  For Repair",
       },
     ],
   },
@@ -99,7 +95,12 @@ export const formItems = [
     inputType: "searchBar",
     isRequired: false,
     validations: {},
-    options: [],
+    options: [
+      {label:"Owner 1", id:1},
+      {label:"Owner 2",id:2},
+      {label:"Owner 3",id:3},
+      {label:"ADMX-ARCHER DANIELS MIDLAND",id:4}
+    ],
   },
   {
     label: "SECONDARY OWNER",
