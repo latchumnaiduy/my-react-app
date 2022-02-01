@@ -38,7 +38,7 @@ import { formItems } from "../utils/sample-data.js";
 import { FormInputItems } from "../components/FormInputItems";
 import { formItemsType } from "../utils/addCarType";
 import { useEffect, useState } from "react";
-import { setEditData } from "./dataTransform";
+import { setEditData, editFormValues } from "./dataTransform";
 import { useLocation } from "react-router";
 import { Col, Form, Row } from "antd";
 
@@ -74,8 +74,9 @@ useEffect(() => {
     let breadCrumbItemsClone = [...breadCrumbItems];
     breadCrumbItemsClone.push(newBreadCrumb);
     setbreadCrumbItems(breadCrumbItemsClone);
-    const formItems_new = [...formItemsClone];
-   const editedData = setEditData(null,[...formItems_new]);
+    // const formItems_new = [...formItemsClone];
+   const editedData = setEditData(editFormValues);
+   addCarForm.setFieldsValue(editedData)
    console.log(editedData, "editedData");
   }
 },[location])
@@ -88,7 +89,7 @@ useEffect(() => {
     if (INDEX > -1) {
       formItems[INDEX]['value'] = e[keyNmae];
     }
-    setFormItemsClone(formItems);
+    // setFormItemsClone(formItems);
     formValuesClone = {...formValuesClone, ...e}
     setFormValues({...formValuesClone});
     console.log(e, 'changes');
@@ -123,6 +124,7 @@ useEffect(() => {
           layout="vertical"
           onFinish={onFinish}
           onFinishFailed={onFinishFailed}
+          preserve={true}
           autoComplete="off"
         >
            <Row gutter={[16, 5]} >

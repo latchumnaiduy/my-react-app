@@ -50,7 +50,7 @@ const App: React.FC = () => (
        {/* <Route path="/Cars" component={Cars} exact={true}/> */}
        <Route path="/add-repair" component={AddRepair} exact={true}/>
 
-        <Redirect path="" to="/add-car"  />
+        {/* <Redirect path="" to="/add-car"  /> */}
       </IonRouterOutlet> 
     </IonReactRouter>
   </IonApp>

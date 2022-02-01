@@ -1,76 +1,10 @@
-/* .breadcrumbs {
-    overflow: hidden;
-    list-style-type: none;
-    width: 100%;
-    padding-left: 5px;
-    margin: 5px 0;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-  }
-  .breadcrumbs li {
-    float: left;
-    margin: 0 0.5em 0 1em;
-  }
-  .breadcrumbs li:first-child {
-    margin-left: 0;
-  }
-  .breadcrumbs li:first-child a::before {
-    display: none;
-  }
-  
-  .breadcrumbs a {
-    background-color: #007dba;
-    color: #fff;
-    padding: 0.3em 1em;
-    float: left;
-    text-decoration: none;
-    position: relative;
-  }
-  .breadcrumbs a p {
-    margin: 0;
-  }
-  
-  .breadcrumbs a::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    margin-top: -2em;
-    border-width: 2em 0px 2em 2em;
-    border-style: solid;
-    border-color: #267dba #267dba #267dba transparent;
-    left: -1.9em;
-  }
-  
-  .breadcrumbs a::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    margin-top: -2em;
-    border-top: 2em solid transparent;
-    border-bottom: 2em solid transparent;
-    border-left: 2.5em solid #267dba;
-    right: -1.9em;
-  }
-  
-  .breadcrumbs a:hover::after {
-    border-left-color: #267dba;
-  }
-  .breadcrumb-text {
-    font-family: Robotomedium;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 20px;
-    /* identical to box height, or 125% */
-    /* color: #ffffff;
-  } */
+
   .breadcrumb-title {
     font-family: Robotobold;
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
     line-height: 16px;
-    /* identical to box height, or 133% */
     letter-spacing: 0.14px;
     color: #ffffff;
   }
@@ -87,7 +21,7 @@
     height: 62px;
     list-style: none;
   }
-  /* ----------------------1st breadcrum----------------------------------- */
+ 
 .cardetail-breadcrum-1stimage {
   height: 46px;
   width: 128.75628662109375px;
@@ -100,24 +34,19 @@
   width: 100%;
   height: 16px;
   left: 12px;
-  /* right: 23.21%; */
   top: 8%;
-  /* bottom: 58.64%; */
   font-family: Robotoregular;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
-  /* identical to box height, or 133% */
   letter-spacing: 0.14px;
   color: #ffffff;
 }
 .cardetail-quest1-breadcrum {
   position: absolute;
   left: 12px;
-  /* right: 23.21%; */
   top: 48%;
-  /* bottom: 10.86%; */
   font-family: Robotobold;
   font-style: normal;
   font-weight: bold;
@@ -126,7 +55,6 @@
   color: #ffffff;
 }
 
-/* -----------------------2nd breadcrum--------------------------------------- */
 .cardetail-breadcrum-2ndback-images {
   height: 46px;
   width: 130.75628662109375px;
@@ -136,8 +64,6 @@
 }
 .cardetail-Track-breadcrum {
   position: absolute;
-  /* left: 38.5%;
-  right: 25.19%; */
   top: 8%;
   bottom: 58.18%;
   width: 100%;
@@ -147,7 +73,6 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
-  /* identical to box height, or 133% */
   letter-spacing: 0.14px;
   color: #ffffff;
   padding-left: 20%;
@@ -155,8 +80,6 @@
 .cardetail-Track1-bold-breadcrum {
   position: absolute;
   width: 100%;
-  /* left: 38.5%;
-  right: 17.56%; */
   top: 48%;
   bottom: 16.36%;
   font-family: Robotobold;
@@ -167,7 +90,7 @@
   color: #ffffff;
   padding-left: 20%;
 }
-/* ------------------------------3rd breadcrum-------------------------------------- */
+
 .cardetail-breadcrum-3rd-back-images {
   height: 48px;
   width: 129.75628662109375px;
@@ -180,8 +103,6 @@
 .cardetail-Cars-breadcrum {
   position: absolute;
   width: 100%;
-  /* left: 70.01%;
-  right: 26.61%; */
   top: 8%;
   bottom: 58.73%;
   font-family: Robotoregular;
@@ -197,8 +118,6 @@
 .cardetail-carnumber-breadcrum {
   position: absolute;
   width: 100%;
-  /* left: 70.01%;
-  right: 18.27%; */
   top: 48%;
   bottom: 10.95%;
   font-family: Robotobold;
@@ -206,19 +125,18 @@
   font-weight: bold;
   font-size: 16px;
   line-height: 20px;
-  /* identical to box height, or 125% */
   color: #ffffff;
   padding-left: 20%;
 }
 
 .cardetail-all-backbreadrum-images {
-  /* top:-6px; */
+
   background-color: rgba(0, 125, 186, 1);
   left: 0px;
   max-width: 35%;
   min-width: 32%;
   height: 100%;
-  /* right: -6px; */
+
 }
 
 .first-breadcrum {

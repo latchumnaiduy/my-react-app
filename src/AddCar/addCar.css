@@ -11,8 +11,8 @@
 }
 .ion-col-item{
   padding-bottom:12px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
 }
 .btn-save {
   height: 44px;

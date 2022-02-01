@@ -4,10 +4,34 @@
   position: relative;
   caret-color:black;
   width: 100% !important;
+  border-radius: 0;
   /* --padding-end: 0;
   --padding-start: 0;
   margin-left: 3px;
   margin-right: 3px; */
+}
+.ant-form-item-has-error .ant-input-number, .ant-form-item-has-error .ant-input, .ant-form-item-has-error .ant-picker{
+  border-color: #ff4d4f !important;
+}
+.ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before{
+  display:none;
+}
+.ant-input:focus, .ant-picker-focused, .ant-select-focused {
+  border: 1px solid #007DBA !important;
+  box-shadow: none;
+}
+input {
+  font-family: 'Robotobold';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height, or 125% */
+/* Light UI/Primary */
+color: #000000;
+}
+.ant-form-item{
+  margin-bottom: 0;
 }
 .ant-select{
   width: 100%;
@@ -82,7 +106,7 @@
 }
 .ion-cars-label {
   text-transform: uppercase;
-  margin-bottom: 5px;
+  margin-bottom: -5px;
   font-family: Robotomedium !important;
   font-style: normal;
   font-weight: 500;
@@ -106,6 +130,7 @@
   margin-bottom: 5px;
   /* height: 210px; */
   min-height: 10px;
+  width: 100%;
 }
 .add-car-statusCard-label {
   font-family: Roboto;
@@ -145,11 +170,10 @@
   color: white;
   content: '\2713';
 } */
-.add-car-checkbox .ant-radio-wrapper{
+.add-car-checkbox .ant-radio-button-wrapper{
   display: flex;
-  align-items: flex-end;
   margin-bottom: 19px;
-  font-family: Roboto;
+  font-family: 'Robotobold';
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -158,6 +182,26 @@
   /* Light UI/Primary */
   color: #000000 !important;
   margin-left: 8px;
+  border: none !important;
+  outline: transparent !important;
+  box-shadow:none !important;
+}
+.add-car-checkbox .ant-radio-button-wrapper:first-child{
+  padding: 0;
+}
+.add-car-checkbox .ant-radio-button-wrapper:first-child .radio-group-label{
+  margin-left: 10px;
+}
+.add-car-checkbox .radio-group-label {
+  margin-left: 20px;
+}
+.add-car-checkbox .ant-radio-button-wrapper::before {
+  content:url('../assets/radio-uncheck.svg');
+  background-color: transparent !important;
+}
+.add-car-checkbox .ant-radio-button-wrapper-checked::before {
+  content:url('../assets/radio-check.svg');
+  background-color: transparent !important;
 }
 /* .ant-radio-inner::after {
   height: 20px;
@@ -206,6 +250,13 @@
 }
 .ant-form-item-label label, .ant-form-item-label .ion-item-toggle-btn {
   width: 100%;
+}
+.toggle-form-item .ant-form-item-control{
+  position: absolute;
+  right: 15px;
+}
+.ant-select-arrow{
+  color: #000000 !important;
 }
 .add-car-toggle {
   --handle-background:#CCE5F1;
