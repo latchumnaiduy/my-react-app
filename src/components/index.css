@@ -274,8 +274,7 @@ color: #000000;
   width: 22px;
   top: -1px;
 }
-.add-car-toggle{
-}
+
 .add-car-toggle .ant-switch-handle::before {
   background-color:#CCE5F1;
 }
