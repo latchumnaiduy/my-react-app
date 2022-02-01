@@ -33,7 +33,7 @@ export const FormInputItems: React.FC<IProps> = ({ formItems, onChange }) => {
       }
       name={formItems.keyName}
       className={`${formItems.keyName}`}
-      rules={[{ required: true, message: "Please input the field!" }]}
+      // rules={[{ required: true, message: "Please input the field!" }]}
     >
       <DatePicker
         format={dateFormat}
@@ -58,7 +58,7 @@ export const FormInputItems: React.FC<IProps> = ({ formItems, onChange }) => {
         </IonLabel>
       }
       name={formItems.keyName}
-      rules={[{ required: true, message: "Please input the field!" }]}
+      // rules={[{ required: true, message: "Please input the field!" }]}
     >
       <Input type={formItems.inputType} className="ion-datepicker-btn"></Input>
     </Form.Item>
@@ -74,7 +74,7 @@ export const FormInputItems: React.FC<IProps> = ({ formItems, onChange }) => {
         </IonLabel>
       }
       name={formItems.keyName}
-      rules={[{ required: true, message: "Please input the field!" }]}
+      // rules={[{ required: true, message: "Please input the field!" }]}
     >
       <Select
         showSearch={formItems.inputType === "searchBar" ? true : false}
@@ -118,7 +118,7 @@ export const FormInputItems: React.FC<IProps> = ({ formItems, onChange }) => {
     <Form.Item
       label={<IonLabel className="ion-cars-label">{formItems?.label}</IonLabel>}
       name={formItems.keyName}
-      rules={[{ required: true, message: "Please input the field!" }]}
+      // rules={[{ required: true, message: "Please input the field!" }]}
     >
       <Radio.Group
         className="add-car-checkbox add-car-statusCard"
