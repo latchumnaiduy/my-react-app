@@ -47,7 +47,7 @@ const App: React.FC = () => (
         <Route path="/add-car" component={AddCar} exact={true}/> 
           <Route path="/Locations" component={Locations} exact={true}/>
         <Route path="/Cars" component={Cars} exact={true}/>
-       {/* <Route path="/Cars" component={Cars} exact={true}/> */}
+       <Route path="/Pin" component={Pin} exact={true}/>
        <Route path="/add-repair" component={AddRepair} exact={true}/>
 
         {/* <Redirect path="" to="/add-car"  /> */}

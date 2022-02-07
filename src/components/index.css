@@ -20,6 +20,18 @@
   border: 1px solid #007DBA !important;
   box-shadow: none;
 }
+.ant-select-selection-item{
+  display: flex;
+  align-items: center;
+  font-family: 'Robotobold';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height, or 125% */
+  /* Light UI/Primary */
+  color: #000000;
+}
 input {
   font-family: 'Robotobold';
 font-style: normal;
@@ -105,7 +117,7 @@ color: #000000;
   margin-left: 8px;
 }
 .ion-cars-label {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   margin-bottom: -5px;
   font-family: Robotomedium !important;
   font-style: normal;
@@ -263,23 +275,26 @@ color: #000000;
   background:#CCE5F1;
   --background-checked: #66B1D5;
   --handle-background-checked: #66B1D5;
-  height: 20px;
+  height: 12px;
   width: 20px;
 }
-.add-car-toggle.ant-switch-checked{
+/* .add-car-toggle.ant-switch-checked{
   background: #66B1D5;
-}
+} */
 .add-car-toggle .ant-switch-handle{
   height: 22px;
   width: 22px;
-  top: -1px;
+  top: -5px;
 }
-
+.add-car-toggle-lable{
+  margin-left: 8px;
+}
 .add-car-toggle .ant-switch-handle::before {
   background-color:#CCE5F1;
+  border-radius: 50%;
 }
 .add-car-toggle.ant-switch-checked .ant-switch-handle::before {
-  background-color:#66B1D5;
+  background-color:#007DBA;
 }
 .ion-selectdropdown{width: 50px;
   height: 18px;

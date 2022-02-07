@@ -37,8 +37,11 @@ import CustomHeader from "./components/CustomHeader";
 import { addRepairItems, formItems } from "./utils/sample-data.js";
 import { FormInputItems } from "./components/FormInputItems";
 import { formItemsType } from "./utils/addCarType";
+import { Button, Col, Form, Row } from "antd";
+import { useState } from "react";
 
 const AddRepair: React.FC = () => {
+  const [addRepairForm] = Form.useForm();
   const breadCrumbItems = [
     {
       name: "Location",
@@ -60,7 +63,24 @@ const AddRepair: React.FC = () => {
     console.log(e, 'changes');
     
   }
+
+// const isErros = () => {
+//   let FIELD_ERRORS = addRepairForm.getFieldsError();
+//   let ERRORS = FIELD_ERRORS.filter((field) => field.errors.length > 0);
+//   return ERRORS;
+// }
+
+  const onFinish = (values: any) => {
+    console.log(values,"form values");
+    
+  }
+
+  const onFinishFailed = () => {}
+
+
   const formItemsClone: formItemsType[] = [...addRepairItems];
+
+
   return (
     <IonPage>
       <IonHeader class="location-tool-bar">
@@ -71,20 +91,32 @@ const AddRepair: React.FC = () => {
       </IonHeader>
       <IonContent fullscreen>
         <IonGrid>
-         <IonRow>
+        <Form
+          name="addRepairForm"
+          form={addRepairForm}
+          labelCol={{ span: 24 }}
+          wrapperCol={{ span: 24 }}
+          layout="vertical"
+          onFinish={onFinish}
+          onFinishFailed={onFinishFailed}
+          preserve={true}
+          autoComplete="off"
+        >
+         <Row gutter={[16, 5]}>
             {formItemsClone &&
               formItemsClone.map((item, i) => {
                 return (
-                  <IonCol
-                    size="12"
-                    className="ion-col-item"
+                  <Col
+                    span={24}
+                    className={`ion-col-item ${item.inputType === "toggle" ? 'pb-0' : ''}`}
                     key={`form-items-${i}`}
                   >
                     <FormInputItems formItems={item} onChange={onChange}></FormInputItems>
-                  </IonCol>
+                  </Col>
                 );
               })}
-          </IonRow>
+          </Row>
+          </Form>
         </IonGrid>
       </IonContent>
       <IonFooter className="ion-footer">

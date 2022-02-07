@@ -39,7 +39,7 @@ import { FormInputItems } from "../components/FormInputItems";
 import { formItemsType } from "../utils/addCarType";
 import { useEffect, useState } from "react";
 import { setEditData, editFormValues } from "./dataTransform";
-import { useLocation } from "react-router";
+import { useLocation } from "react-router-dom";
 import { Col, Form, Row } from "antd";
 
 const AddCar: React.FC = () => {
@@ -114,7 +114,7 @@ useEffect(() => {
         <Breadcrumbs breadCrumbItems={breadCrumbItems}></Breadcrumbs>
       </IonHeader>
       <IonContent fullscreen>
-        <IonGrid className="pb-0">
+        <IonGrid className="pt-0">
         
          <Form
           name="addCarForm"
@@ -133,7 +133,7 @@ useEffect(() => {
                 return (
                   <Col
                     span={24}
-                    className="ion-col-item"
+                    className={`ion-col-item ${item.inputType === "toggle" ? 'pb-0' : ''}`}
                     key={`form-items-${i}`}
                   >
                     <FormInputItems formItems={item} onChange={onChange}></FormInputItems>

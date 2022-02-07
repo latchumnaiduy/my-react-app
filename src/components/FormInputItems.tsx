@@ -24,7 +24,7 @@ export const FormInputItems: React.FC<IProps> = ({ formItems, onChange }) => {
   return formItems.inputType === "date" ? (
     <Form.Item
       label={
-        <IonLabel className="ion-cars-label">
+        <IonLabel className={`ion-cars-label ${formItems?.className}`}>
           {formItems?.label}{" "}
           {formItems?.isRequired && (
             <span className="required">(Required)</span>
@@ -33,7 +33,7 @@ export const FormInputItems: React.FC<IProps> = ({ formItems, onChange }) => {
       }
       name={formItems.keyName}
       className={`${formItems.keyName}`}
-      // rules={[{ required: true, message: "Please input the field!" }]}
+      rules={[{ required: true}]}
     >
       <DatePicker
         format={dateFormat}
@@ -50,7 +50,7 @@ export const FormInputItems: React.FC<IProps> = ({ formItems, onChange }) => {
   ) : formItems.inputType === "number" || formItems.inputType === "text" ? (
     <Form.Item
       label={
-        <IonLabel className="ion-cars-label">
+        <IonLabel className={`ion-cars-label ${formItems?.className}`}>
           {formItems?.label}{" "}
           {formItems?.isRequired && (
             <span className="required">(Required)</span>
@@ -58,7 +58,7 @@ export const FormInputItems: React.FC<IProps> = ({ formItems, onChange }) => {
         </IonLabel>
       }
       name={formItems.keyName}
-      // rules={[{ required: true, message: "Please input the field!" }]}
+      rules={[{ required: true}]}
     >
       <Input type={formItems.inputType} className="ion-datepicker-btn"></Input>
     </Form.Item>
@@ -66,7 +66,7 @@ export const FormInputItems: React.FC<IProps> = ({ formItems, onChange }) => {
     formItems.inputType === "searchBar" ? (
     <Form.Item
       label={
-        <IonLabel className="ion-cars-label">
+        <IonLabel className={`ion-cars-label ${formItems?.className}`}>
           {formItems?.label}{" "}
           {formItems?.isRequired && (
             <span className="required">(Required)</span>
@@ -74,7 +74,7 @@ export const FormInputItems: React.FC<IProps> = ({ formItems, onChange }) => {
         </IonLabel>
       }
       name={formItems.keyName}
-      // rules={[{ required: true, message: "Please input the field!" }]}
+      rules={[{ required: true}]}
     >
       <Select
         showSearch={formItems.inputType === "searchBar" ? true : false}
@@ -99,10 +99,11 @@ export const FormInputItems: React.FC<IProps> = ({ formItems, onChange }) => {
       </Select>
     </Form.Item>
   ) : formItems.inputType === "toggle" ? (
-    <Form.Item
+  <Form.Item noStyle>
+        <Form.Item
       className="toggle-form-item"
       label={
-        <IonLabel className="ion-cars-label">
+        <IonLabel className={`ion-cars-label ${formItems?.className}`}>
           {formItems?.label}{" "}
           {formItems?.isRequired && (
             <span className="required">(Required)</span>
@@ -113,12 +114,14 @@ export const FormInputItems: React.FC<IProps> = ({ formItems, onChange }) => {
       name={formItems.keyName}
     >
       <Switch className="add-car-toggle" />
+      <span className="add-car-toggle-lable">{formItems?.secondary_label}</span>
     </Form.Item>
+  </Form.Item>
   ) : formItems.inputType === "checkbox" ? (
     <Form.Item
-      label={<IonLabel className="ion-cars-label">{formItems?.label}</IonLabel>}
+      label={<IonLabel className={`ion-cars-label ${formItems?.className}`}>{formItems?.label}</IonLabel>}
       name={formItems.keyName}
-      // rules={[{ required: true, message: "Please input the field!" }]}
+      rules={[{ required: true}]}
     >
       <Radio.Group
         className="add-car-checkbox add-car-statusCard"

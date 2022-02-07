@@ -4,6 +4,7 @@ export const formItems = [
     keyName: "CAR_CHECK_IN_DATE",
     inputType: "date",
     isRequired: false,
+    className:'text-upper-case',
     validations: {},
   },
   {
@@ -12,6 +13,7 @@ export const formItems = [
     inputType: "date",
     isRequired: false,
     validations: {},
+    className:'text-upper-case',
   },
   {
     label: "CAR INITIAL",
@@ -19,6 +21,7 @@ export const formItems = [
     inputType: "text",
     isRequired: true,
     validations: {},
+    className:'text-upper-case',
   },
   {
     label: "CAR NUMBER",
@@ -26,6 +29,7 @@ export const formItems = [
     inputType: "number",
     isRequired: true,
     validations: {},
+    className:'text-upper-case',
   },
   {
     label: "CHECK UMLER",
@@ -34,6 +38,7 @@ export const formItems = [
     isRequired: false,
     secondary_label: "Yes",
     validations: {},
+    className:'text-upper-case',
   },
   {
     label: "CAR KIND",
@@ -41,6 +46,7 @@ export const formItems = [
     inputType: "select",
     isRequired: true,
     validations: {},
+    className:'text-upper-case',
     options: [
       {
         label: "SEDAN",
@@ -63,6 +69,7 @@ export const formItems = [
     secondary_label: "Empty",
     isRequired: false,
     validations: {},
+    className:'text-upper-case',
   },
   {
     label: "STATUS",
@@ -70,6 +77,7 @@ export const formItems = [
     inputType: "checkbox",
     isRequired: false,
     validations: {},
+    className:'text-upper-case',
     checkboxOptions: [
       {
         label: "As Awaiting Shop Space",
@@ -95,6 +103,7 @@ export const formItems = [
     inputType: "searchBar",
     isRequired: false,
     validations: {},
+    className:'text-upper-case',
     options: [
       {label:"Owner 1", id:1},
       {label:"Owner 2",id:2},
@@ -108,6 +117,7 @@ export const formItems = [
     inputType: "text",
     isRequired: false,
     validations: {},
+    className:'text-upper-case',
     options: [],
   },
   {
@@ -116,6 +126,7 @@ export const formItems = [
     inputType: "select",
     isRequired: true,
     validations: {},
+    className:'text-upper-case',
     options: [
       {
         label: "A - AAR",
@@ -170,9 +181,10 @@ export const addRepairItems=[
   {
     label: "Validation Type",
     inputType: "select",
-    keyName: '',
+    keyName: 'VALIDATION_TYPE',
     isRequired: true,
     validations: {},
+    className:'text-capitalize',
     options: [
       {
         label: "SEDAN",
@@ -190,16 +202,18 @@ export const addRepairItems=[
   },{
     label: "User Rules",
     inputType: "toggle",
-    keyName: '',
+    keyName: 'USER_RULES',
     secondary_label: "Empty",
     isRequired: false,
     validations: {},
+    className:'text-capitalize',
   },{
     label: "Pricing",
     inputType: "select",
-    keyName: '',
+    keyName: 'PRICING',
     isRequired: true,
     validations: {},
+    className:'text-capitalize',
     options: [
       {
         label: "SEDAN",
@@ -218,9 +232,10 @@ export const addRepairItems=[
   {
     label: "RP",
     inputType: "select",
-    keyName: '',
+    keyName: 'RP',
     isRequired: true,
     validations: {},
+    className:'text-upper-case',
     options: [
       {
         label: "AUTO",
@@ -251,123 +266,140 @@ export const addRepairItems=[
   {
     label: "AJC",
     inputType: "text",
-    keyName: '',
+    keyName: 'AJC',
     isRequired: true,
     validations: {},
+    className:'text-upper-case',
   },
   {
     label: "LOC",
     inputType: "text",
-    keyName: '',
+    keyName: 'LOC',
     isRequired: false,
     validations: {},
+    className:'text-upper-case',
   },
   {
     label: "QTY",
     inputType: "text",
-    keyName: '',
+    keyName: 'QTY',
     isRequired: true,
     validations: {},
+    className:'text-upper-case',
   },
   {
     label: "CC",
     inputType: "text",
-    keyName: '',
+    keyName: 'CC',
     isRequired: true,
     validations: {},
+    className:'text-upper-case',
   },
   {
     label: "ACP",
     inputType: "text",
-    keyName: '',
+    keyName: 'ACP',
     isRequired: true,
     validations: {},
+    className:'text-upper-case',
   },
   {
     label: "AQ",
     inputType: "text",
-    keyName: '',
+    keyName: 'AQ',
     isRequired: false,
     validations: {},
+    className:'text-upper-case',
   },
   {
     label: "AUQ",
     inputType: "text",
-    keyName: '',
+    keyName: 'AUQ',
     isRequired: false,
     validations: {},
+    className:'text-upper-case',
   },
   {
     label: "WM",
     inputType: "text",
-    keyName: '',
+    keyName: 'WM',
     isRequired: true,
     validations: {},
+    className:'text-upper-case',
   },
   {
     label: "DESCRIPTION",
     inputType: "text",
-    keyName: '',
+    keyName: 'DESCRIPTION',
     isRequired: true,
     validations: {},
+    className:'text-upper-case',
   },
   {
     label: "RJC",
     inputType: "text",
-    keyName: '',
+    keyName: 'RJC',
     isRequired: true,
     validations: {},
+    className:'text-upper-case',
   },
   {
     label: "RCP",
     inputType: "text",
-    keyName: '',
+    keyName: 'RCP',
     isRequired: true,
     validations: {},
+    className:'text-upper-case',
   },
   {
     label: "RQ",
     inputType: "text",
-    keyName: '',
+    keyName: 'RQ',
     isRequired: false,
     validations: {},
+    className:'text-upper-case',
   },
   {
     label: "RUQ",
     inputType: "text",
-    keyName: '',
+    keyName: 'RUQ',
     isRequired: false,
     validations: {},
+    className:'text-upper-case',
   },
   {
     label: "RESP",
     inputType: "text",
-    keyName: '',
+    keyName: 'RESP',
     isRequired: true,
     validations: {},
+    className:'text-upper-case',
   },
   {
     label: "CATEOGERY",
     inputType: "text",
-    keyName: '',
+    keyName: 'CATEOGERY',
     isRequired: false,
     validations: {},
+    className:'text-upper-case',
   },
   {
     label: "INSPECTION",
     inputType: "toggle",
-    keyName: '',
+    keyName: 'INSPECTION',
     secondary_label: "Empty",
     isRequired: false,
     validations: {},
+    className:'text-upper-case',
   },
   {
     label: "HIDDEN",
     inputType: "toggle",
-    keyName: '',
+    keyName: 'HIDDEN',
     secondary_label: "Empty",
     isRequired: false,
     validations: {},
+    className:'text-upper-case',
   }
 
 ]
